@@ -1,0 +1,9 @@
+.main {
+  min-height: 100vh;
+}
+
+.main__wrap {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto;
+}
