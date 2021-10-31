@@ -19,8 +19,10 @@ const Header = () => {
   useEffect(() => {
     if (showMenu) {
       linksContainer.current.style.height = "3rem";
+      linksContainer.current.style.opacity = "1";
     } else {
-      linksContainer.current.style.height = "0px";
+      linksContainer.current.style.height = "0";
+      linksContainer.current.style.opacity = "0";
     }
   }, [showMenu]);
 
