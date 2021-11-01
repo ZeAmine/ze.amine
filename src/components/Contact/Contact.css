@@ -1,3 +1,7 @@
+.contact {
+  padding-bottom: 15rem;
+}
+
 .contact__content {
   display: flex;
   flex-flow: column nowrap;

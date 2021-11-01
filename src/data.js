@@ -20,7 +20,7 @@ export const projects = [
   {
     id: 1,
     num: "01",
-    title: "Disney Clone",
+    title: "Disney Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API · AXIOS",
     direction: "reverse",
@@ -28,14 +28,14 @@ export const projects = [
   {
     id: 2,
     num: "02",
-    title: "Prime Video Clone",
+    title: "Prime Video Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API · AXIOS",
   },
   {
     id: 3,
     num: "03",
-    title: "Airbnb Clone",
+    title: "Airbnb Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TAILWIND CSS · NEXT.JS",
     direction: "reverse",
@@ -43,14 +43,14 @@ export const projects = [
   {
     id: 4,
     num: "04",
-    title: "Awake Koala",
+    title: "Awake Koala.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API",
   },
   {
     id: 5,
     num: "BONUS 01",
-    title: "Affiche 'Eclipse'",
+    title: "Affiche 'Eclipse'.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "PHOTOSHOP · ILLUSTRATOR",
     direction: "reverse",
@@ -58,7 +58,7 @@ export const projects = [
   {
     id: 6,
     num: "BONUS 02",
-    title: "Affiche 'Eclipse'",
+    title: "Affiche 'Eclipse'.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "PHOTOSHOP · ILLUSTRATOR",
   },

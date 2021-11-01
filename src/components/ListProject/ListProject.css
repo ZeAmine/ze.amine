@@ -42,8 +42,8 @@
   place-items: center;
   width: 1.75rem;
   height: 1.75rem;
-  background-color: var(--clr-lightgray);
   border-radius: 50%;
+  background-color: var(--clr-lightgray);
   transition: background 200ms;
 }
 
@@ -52,12 +52,8 @@
   color: var(--clr-gray);
 }
 
-.project_item_link a:hover .project__icon {
-  color: var(--clr-white);
-}
-
 .project_item_link a:hover {
-  background-color: var(--clr-bg);
+  background-color: var(--clr-primary-1);
 }
 
 /*__________Images*/
