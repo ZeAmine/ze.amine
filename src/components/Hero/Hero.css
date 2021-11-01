@@ -1,7 +1,7 @@
 .hero {
   padding-top: 7.5rem;
-  padding-bottom: 14rem;
-  border-bottom: 1px solid var(--clr-gray);
+  padding-bottom: 15rem;
+  /*border-bottom: 1px solid var(--clr-gray);*/
 }
 
 .hero__wrap {
@@ -61,39 +61,6 @@
   width: 100%;
 }
 
-.hero__button {
-  font-family: var(--font-1);
-  display: flex;
-  align-items: center;
-  width: inherit;
-  height: 80px;
-  border: 1px solid var(--clr-lightgray);
-  background: transparent;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.hero_icon_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-  padding: 0 2.5rem;
-  margin-right: 2.5rem;
-  border-right: 1px solid var(--clr-lightgray);
-}
-
-.hero__icon {
-  font-size: 1.75rem;
-  color: var(--clr-white);
-}
-
-.hero__mail h4 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--clr-white);
-}
-
 /*------Forme*/
 .hero_img_bg {
   position: absolute;
@@ -110,13 +77,19 @@
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
+  from {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-25px) rotate(2deg);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-50px) rotate(0deg);
   }
-  100% {
-    transform: translateY(0px);
+  75% {
+    transform: translateY(-25px) rotate(-2deg);
+  }
+  to {
+    transform: translateY(0px) rotate(0deg);
   }
 }

@@ -1,2 +1,4 @@
-.main {
+.projects {
+  /*border-bottom: 1px solid var(--clr-gray);*/
+  background-color: var(--clr-bg-2);
 }

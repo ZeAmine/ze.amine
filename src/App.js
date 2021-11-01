@@ -11,6 +11,17 @@ function App() {
 
 export default App;
 
+//TODO
+// la taille de la typo
+// couleurs
+// ajouter les line-height
+// le hover (couleur uv) sur image
+// les btn sur header
+// barre de progression
+// le fichier "context"
+// animation GSAP
+// corriger les fautes
+
 // SI JE CREE DES PAGES
 // <Router>
 //     <Home />

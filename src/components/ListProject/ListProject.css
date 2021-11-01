@@ -1,0 +1,148 @@
+.project__item {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.project_item_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+
+.project_item_wrap.reverse {
+  flex-flow: row-reverse nowrap;
+}
+
+/*--------RIGHT----------*/
+.project_content_right {
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+.project_content_right.reverse {
+  margin-left: 2rem;
+}
+
+/*__________Links*/
+.project__links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.project_item_link {
+  margin-left: min(calc(1rem * (16 / 20 + 0.333 * 0)), 16px);
+}
+
+.project_item_link a {
+  display: inline-flex;
+  place-content: center;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: var(--clr-lightgray);
+  border-radius: 50%;
+  transition: background 200ms;
+}
+
+.project__icon {
+  width: 1.25rem;
+  color: var(--clr-gray);
+}
+
+.project_item_link a:hover .project__icon {
+  color: var(--clr-white);
+}
+
+.project_item_link a:hover {
+  background-color: var(--clr-bg);
+}
+
+/*__________Images*/
+.project__img {
+  position: relative;
+  width: 650px;
+  height: 10rem;
+}
+
+.project_img_container {
+  position: relative;
+  height: inherit;
+  width: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project_img_container img {
+  position: absolute;
+  top: -50%;
+}
+
+/*--------Info*/
+.project__info {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.project_info_container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.project__line {
+  width: 45px;
+  height: 0;
+  border: 1px solid var(--clr-gray);
+  margin: 0 1rem;
+}
+
+.project_info_container span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clr-lightgray);
+  line-height: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.project_info_container .number {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-primary-1);
+  line-height: 1.5rem;
+}
+
+/*--------LEFT----------*/
+.project_content_left {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+
+/*--------Title*/
+.project__title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.project__title h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--clr-white);
+  line-height: 1.75rem;
+}
+
+.project__text {
+  width: 300px;
+  padding-left: 1rem;
+}
+
+.project__text p {
+  font-size: 1.125rem;
+  font-weight: normal;
+  color: var(--clr-lightgray);
+  line-height: 1.5rem;
+}
