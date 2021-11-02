@@ -1,7 +1,6 @@
 .hero {
   padding-top: 7.5rem;
-  padding-bottom: 15rem;
-  /*border-bottom: 1px solid var(--clr-gray);*/
+  padding-bottom: 20rem;
 }
 
 .hero__wrap {
