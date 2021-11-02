@@ -21,14 +21,3 @@ export default App;
 // le fichier "context"
 // animation GSAP
 // corriger les fautes
-
-// SI JE CREE DES PAGES
-// <Router>
-//     <Home />
-//     <Switch>
-//         <Route path="/" exact component={Home} />
-//         <Route path="/a-propos" exact component={About} />
-//         <Route path="/projets" exact component={Projects} />
-//         <Route path="/contact" exact component={Contact} />
-//     </Switch>
-// </Router>

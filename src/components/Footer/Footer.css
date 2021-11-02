@@ -76,7 +76,9 @@
 
 /*-----Btn-back*/
 .footer__back {
-  float: right;
+  display: flex;
+  place-content: flex-end;
+  place-items: flex-start;
 }
 
 .footer_back_btn {
