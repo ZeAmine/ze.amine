@@ -81,6 +81,7 @@ svg {
 
 :root {
   --size-text-header: 2rem;
+  --size-text-navbar: 1rem;
   --size-title-section: 5rem;
   --size-subtitle-hero: 1.25rem;
   --size-text-hero: 1.25rem;

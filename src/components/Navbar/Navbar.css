@@ -25,7 +25,8 @@
   z-index: -10;
 }
 
-.navbar__items {
+/*---------Nav*/
+.navbar__list {
   display: flex;
   place-items: center;
   width: 100%;
@@ -33,15 +34,15 @@
   overflow: hidden;
 }
 
-.navbar__item {
+.navbar__link {
   padding: 0 1rem;
   z-index: 10;
 }
 
-.navbar__item span {
-  font-size: 1rem;
+.navbar__link span {
+  font-size: var(--size-text-navbar);
   font-weight: 500;
   color: var(--clr-black);
-  line-height: 2rem;
+  line-height: 1.5rem;
   padding: 0 1rem;
 }
