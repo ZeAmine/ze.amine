@@ -34,15 +34,27 @@
   overflow: hidden;
 }
 
-.navbar__link {
+.navbar__item {
   padding: 0 1rem;
+  cursor: pointer;
   z-index: 10;
 }
 
-.navbar__link span {
+.navbar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__icon {
+  width: 1.25rem;
+  color: var(--clr-black);
+}
+
+.navbar__item span {
   font-size: var(--size-text-navbar);
   font-weight: 500;
   color: var(--clr-black);
   line-height: 1.5rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }

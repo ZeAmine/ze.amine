@@ -128,25 +128,16 @@
 }
 
 .header__item {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--clr-lightgray);
-  line-height: 1;
-}
-.header__item:hover {
-  font-weight: 500;
-  color: var(--clr-white);
-}
-.header__item.active {
-  color: var(--clr-white);
-}
-
-.header__link {
   padding: 0.6rem 0.9rem;
   border-radius: 4px;
   color: inherit;
   transition: color 200ms ease;
+  cursor: pointer;
 }
-.header__link.opacity {
-  opacity: 0;
+
+.header__item span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-lightgray);
+  line-height: 1.5rem;
 }

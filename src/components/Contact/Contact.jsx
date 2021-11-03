@@ -4,7 +4,7 @@ import { RiMailLine } from "react-icons/all";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contact__wrap container">
         <div className="section__title">
           <h1>Contact.</h1>

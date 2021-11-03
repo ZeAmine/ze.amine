@@ -124,10 +124,6 @@ svg {
 /*  --site-width: 40vw;*/
 /*}*/
 
-.main {
-  overflow-x: hidden;
-}
-
 .container {
   max-width: var(--site-width);
   margin: 0 auto;
