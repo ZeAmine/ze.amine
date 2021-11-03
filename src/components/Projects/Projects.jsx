@@ -8,7 +8,7 @@ const Projects = () => {
     <section className="section projects">
       <div className="projects__wrap container">
         <div className="section__title">
-          <h2>Liste des projets.</h2>
+          <h1>Liste des projets.</h1>
         </div>
         {projects.map((project, index) => (
           <ListProject key={index} {...project} />

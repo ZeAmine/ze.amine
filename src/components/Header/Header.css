@@ -1,7 +1,4 @@
 .header__nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   flex-flow: column nowrap;
   width: 100vw;
@@ -100,7 +97,7 @@
   cursor: pointer;
 }
 .header__dot.active {
-  background-color: var(--clr-primary-2);
+  background-color: var(--clr-primary-1);
 }
 
 /*----------BOTTOM*/

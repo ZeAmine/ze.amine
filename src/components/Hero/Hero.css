@@ -1,6 +1,5 @@
 .hero {
-  padding-top: 7.5rem;
-  padding-bottom: 20rem;
+  padding-bottom: 30vh;
 }
 
 .hero__wrap {
@@ -19,10 +18,11 @@
   margin: 0 2rem;
 }
 
-.hero__name h4 {
-  font-size: 1rem;
+.hero__name h3 {
+  font-size: var(--size-subtitle-hero);
   font-weight: 500;
   color: var(--clr-white);
+  line-height: 1.75rem;
 }
 
 /*-------Title*/
@@ -31,9 +31,10 @@
 }
 
 .hero__title h1 {
-  font-size: 80px;
+  font-size: var(--size-title-section);
   font-weight: bold;
   color: var(--clr-white);
+  line-height: 1;
 }
 
 .hero__content {
@@ -42,22 +43,26 @@
 }
 
 /*-------Text*/
-.hero__text {
+.hero_text_container {
   margin-bottom: 2.5rem;
   margin-top: 7rem;
 }
 
-.hero__text p {
-  font-size: 1.25rem;
-  font-weight: 300;
+.hero__text {
+  font-size: var(--size-text-hero);
+  font-weight: normal;
   color: var(--clr-white);
-  line-height: 30px;
+  line-height: 1.75rem;
   opacity: 0.5;
 }
 
 /*--------Button*/
 .hero__contact {
-  width: 100%;
+  max-width: 700px;
+}
+
+.hero_contact_container {
+  min-width: 280px;
 }
 
 /*------Forme*/

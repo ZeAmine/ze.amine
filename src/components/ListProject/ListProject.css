@@ -99,7 +99,7 @@
 }
 
 .project_info_container span {
-  font-size: 0.875rem;
+  font-size: var(--size-info-project);
   font-weight: 500;
   color: var(--clr-lightgray);
   line-height: 1.25rem;
@@ -124,11 +124,11 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.project__title h4 {
-  font-size: 1.5rem;
+.project__title h2 {
+  font-size: var(--size-title-project);
   font-weight: 500;
   color: var(--clr-white);
-  line-height: 1.75rem;
+  line-height: 2rem;
 }
 
 .project__text {
@@ -137,8 +137,8 @@
 }
 
 .project__text p {
-  font-size: 1.125rem;
+  font-size: var(--size-text-project);
   font-weight: normal;
   color: var(--clr-lightgray);
-  line-height: 1.5rem;
+  line-height: 1.75rem;
 }

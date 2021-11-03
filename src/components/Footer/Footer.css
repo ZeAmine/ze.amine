@@ -16,7 +16,7 @@
 }
 
 .footer_social_title h4 {
-  font-size: 1rem;
+  font-size: var(--size-title-footer);
   font-weight: bold;
   color: var(--clr-white);
   line-height: 1.5rem;
@@ -57,7 +57,7 @@
 }
 
 .footer_contact_title h4 {
-  font-size: 1rem;
+  font-size: var(--size-title-footer);
   font-weight: bold;
   color: var(--clr-white);
   line-height: 1.5rem;
@@ -68,10 +68,10 @@
 }
 .footer_contact_mail a {
   display: inline-block;
-  font-size: 1rem;
+  font-size: var(--size-text-contact);
   font-weight: normal;
   color: var(--clr-white);
-  line-height: 1.25rem;
+  line-height: 1.5rem;
 }
 
 /*-----Btn-back*/
@@ -83,7 +83,7 @@
 
 .footer_back_btn {
   outline: none;
-  font-family: var(--font-1);
+  font-family: var(--font-primary-1);
   display: flex;
   place-content: center;
   place-items: center;

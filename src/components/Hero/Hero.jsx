@@ -7,34 +7,33 @@ const Hero = () => {
     <section className="hero">
       <div className="hero__wrap container">
         <div className="hero__name">
-          <h4>Je m'appelle Amine Zegmou</h4>
+          <h3>Je m'appelle Amine Zegmou</h3>
           <div className="hero__line" />
-          <h4>disponible pour un éventuel stage (Paris)</h4>
+          <h3>disponible pour un éventuel stage (Paris)</h3>
         </div>
         <div className="hero__title">
           <h1>Développeur front-end, de la conception à la réalisation.</h1>
         </div>
         <div className="hero__content">
-          <div className="hero__text">
-            <p>
+          <div className="hero_text_container">
+            <p className="hero__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              <br />
               rhoncus viverra ante, id tincidunt turpis placerat vitae
-              suspendisse
-              <br />
-              sollicitudin sodales nulla, in euismod ex mattis sit amet.
-              <br />
+              suspendisse sollicitudin sodales nulla, in euismod ex mattis sit
+              amet.
             </p>
           </div>
           <div className="hero__contact">
-            <button className="button__contact">
-              <div className="icon__container">
-                <RiMailLine className="icon__contact" />
-              </div>
-              <span className="mail__contact">
-                <h4>amine.zegmou@gmail.com</h4>
-              </span>
-            </button>
+            <a href="/" className="hero_contact_container">
+              <button className="button__contact">
+                <div className="icon__container">
+                  <RiMailLine className="icon__contact" />
+                </div>
+                <span className="mail__contact">
+                  <h4>amine.zegmou@gmail.com</h4>
+                </span>
+              </button>
+            </a>
           </div>
           <div className="hero_img_bg">
             <img

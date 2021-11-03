@@ -50,7 +50,7 @@
 }
 
 body {
-  font-family: var(--font-1);
+  font-family: var(--font-primary-1);
   background-color: var(--clr-bg);
   color: var(--clr-white);
   font-size: 100%;
@@ -80,16 +80,29 @@ svg {
 }
 
 :root {
+  --size-text-header: 2rem;
+  --size-title-section: 5rem;
+  --size-subtitle-hero: 1.25rem;
+  --size-text-hero: 1.25rem;
+  --size-title-project: 1.5rem;
+  --size-text-project: 1.125rem;
+  --size-info-project: 0.875rem;
+  --size-title-contact: 3.75rem;
+  --size-text-contact: 1.25rem;
+  --size-text-btn: 3rem;
+  --size-title-footer: 1rem;
+  --size-text-footer: 1rem;
+
   --clr-primary-1: #00d6c8;
   --clr-bg: #181818;
   --clr-bg-2: #242424;
-
   --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-gray: #2a2a2a;
   --clr-lightgray: #8c8c8c;
 
-  --font-1: GT Walsheim Pro, sans-serif;
+  --font-primary-1: GT Walsheim Pro, sans-serif;
+  --font-primary-2: Basis Grotesque Pro, sans-serif;
 
   --transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
   --site-width: 50vw;
@@ -110,9 +123,9 @@ svg {
 /*  --site-width: 40vw;*/
 /*}*/
 
-/*.main {*/
-/*  overflow-x: hidden;*/
-/*}*/
+.main {
+  overflow-x: hidden;
+}
 
 .container {
   max-width: var(--site-width);
@@ -120,25 +133,25 @@ svg {
 }
 
 .section {
-  padding-bottom: 7.5rem;
+  padding-bottom: 10vh;
 }
 
 .section__title {
   padding-top: 5rem;
   padding-bottom: 7rem;
 }
-.section__title h2 {
-  font-size: 80px;
+.section__title h1 {
+  font-size: var(--size-title-section);
   font-weight: bold;
   color: var(--clr-white);
-  line-height: 2.25rem;
+  line-height: 1;
 }
 
 .button__contact {
-  font-family: var(--font-1);
+  font-family: var(--font-primary-1);
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 600px;
   height: 80px;
   border: 1px solid var(--clr-lightgray);
   border-radius: 15px;

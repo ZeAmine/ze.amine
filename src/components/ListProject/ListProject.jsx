@@ -42,7 +42,7 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
 
         <div className="project_content_left">
           <div className="project__title">
-            <h4>{title}</h4>
+            <h2>{title}</h2>
           </div>
           <div className="project__text">
             <p>{text}</p>
