@@ -52,7 +52,6 @@
 body {
   font-family: var(--font-primary-1);
   background-color: var(--clr-bg);
-  color: var(--clr-white);
   font-size: 100%;
 }
 
@@ -102,6 +101,10 @@ svg {
   --clr-gray: #2a2a2a;
   --clr-lightgray: #8c8c8c;
 
+  --clr-purple-bg: #24144c;
+  --clr-orange-btn: #f5832b;
+  --clr-gray-text: #b4acb4;
+
   --font-primary-1: GT Walsheim Pro, sans-serif;
   --font-primary-2: Basis Grotesque Pro, sans-serif;
 
@@ -148,9 +151,9 @@ svg {
   font-family: var(--font-primary-1);
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 550px;
   height: 80px;
-  border: 1px solid var(--clr-lightgray);
+  border: 1px solid var(--clr-white);
   border-radius: 15px;
   background: transparent;
   overflow: hidden;
@@ -162,13 +165,13 @@ svg {
   align-items: center;
   height: 100%;
   padding: 0 2.5rem;
-  margin-right: 3rem;
-  border-right: 1px solid var(--clr-lightgray);
+  margin-right: 1.8rem;
+  border-right: 1px solid var(--clr-white);
 }
 
 .icon__contact {
   font-size: 1.25rem;
-  color: var(--clr-lightgray);
+  color: var(--clr-white);
 }
 
 .mail__contact h4 {

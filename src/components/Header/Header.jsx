@@ -1,25 +1,39 @@
 import React, { useEffect, useState, useRef } from "react";
 import { links } from "../../data";
+import { RiMoonLine, RiSunLine, RiStarSLine } from "react-icons/all";
 import "./Header.css";
 
 const Header = () => {
-  const [active, setActive] = useState({ index: 1 });
   const [showMenu, setShowMenu] = useState(false);
-
-  const heandleActive = (index) => {
-    setActive({ index: index });
-  };
 
   const linksContainer = useRef(null);
   useEffect(() => {
     if (showMenu) {
       linksContainer.current.style.height = "3rem";
       linksContainer.current.style.opacity = "1";
+      navCursor.current.style.opacity = "1";
+      navCursor.current.style.transform = "translateY(0)";
     } else {
       linksContainer.current.style.height = "0";
       linksContainer.current.style.opacity = "0";
+      navCursor.current.style.opacity = "0";
+      navCursor.current.style.transform = "translateY(-20px)";
     }
   }, [showMenu]);
+
+  const navCursor = useRef(null);
+  const navItems = useRef(null);
+  const handleMouseEnterNavItem = (e) => {
+    const { offsetLeft, clientWidth } = e.target;
+    navCursor.current.style.left = offsetLeft + "px";
+    navCursor.current.style.width = clientWidth + "px";
+  };
+
+  // const handleMouseEnterNavItem = (e) => {
+  //   const { offsetLeft, clientWidth } = e.target;
+  //   navCursor.current.style.left = offsetLeft + "px";
+  //   navCursor.current.style.width = clientWidth + "px";
+  // };
 
   return (
     <header className="header" id="header">
@@ -33,6 +47,16 @@ const Header = () => {
               />
             </a>
             <button
+              className="header__mode"
+              onClick={() => setShowMenu(!showMenu)}
+            >
+              <div className="header_mode_container">
+                <RiSunLine className="header_mode_icon" />
+                <RiMoonLine className="header_mode_icon" />
+                <RiStarSLine className="header_mode_icon" />
+              </div>
+            </button>
+            <button
               className="header__menu"
               onClick={() => setShowMenu(!showMenu)}
             >
@@ -42,11 +66,14 @@ const Header = () => {
         </div>
         <div className="header__bottom" ref={linksContainer}>
           <div className="header_bottom_wrap container">
+            <div className="header_nav_cursor" ref={navCursor} />
             <ul className="header__list">
               {links.map(({ id, url, text }) => {
                 return (
                   <li key={id} className="header__item">
-                    <span>{text}</span>
+                    <span ref={navItems} onClick={handleMouseEnterNavItem}>
+                      {text}
+                    </span>
                   </li>
                 );
               })}

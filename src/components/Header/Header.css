@@ -1,7 +1,7 @@
 .header__nav {
   display: flex;
   flex-flow: column nowrap;
-  width: 100vw;
+  width: 100%;
   z-index: 9999;
 }
 
@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   height: inherit;
-  padding: 0 5vw;
+  padding: 0 8rem;
 }
 
 .header__logo {
@@ -27,13 +27,6 @@
   width: 6rem;
   height: auto;
   place-items: center;
-}
-
-.header__logo span {
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--clr-white);
-  line-height: 1;
 }
 
 /*-------Menu*/
@@ -102,6 +95,9 @@
 
 /*----------BOTTOM*/
 .header__bottom {
+  display: flex;
+  place-content: center;
+  align-items: center;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--clr-gray);
@@ -111,10 +107,21 @@
 }
 
 .header_bottom_wrap {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: inherit;
+  height: 100%;
+}
+
+.header_nav_cursor {
+  position: absolute;
+  top: 8px;
+  height: 2rem;
+  border-radius: 3rem;
+  background-color: var(--clr-primary-1);
+  transition: var(--transition);
+  z-index: -10;
 }
 
 .header__list {
@@ -123,21 +130,49 @@
   align-items: center;
 }
 
-.header__list li:not(:last-of-type) {
-  margin-right: 1rem;
-}
-
 .header__item {
-  padding: 0.6rem 0.9rem;
-  border-radius: 4px;
-  color: inherit;
-  transition: color 200ms ease;
+  display: inline-block;
   cursor: pointer;
 }
 
+.header__list li:not(:last-of-type) {
+  margin-right: 3rem;
+}
+
 .header__item span {
+  display: inline-block;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--clr-lightgray);
+  color: var(--clr-white);
   line-height: 1.5rem;
+  padding: 1rem;
+}
+
+/*--------ButtonMode*/
+.header__mode {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  border-radius: 4px;
+  background-color: lightcoral;
+  transition: background 200ms ease;
+  cursor: pointer;
+}
+
+.header_mode_container {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  background-color: lightblue;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.header_mode_icon {
+  font-size: 1.25rem;
+  color: red;
+  margin-left: 0.2rem;
 }

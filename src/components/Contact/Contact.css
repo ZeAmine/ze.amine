@@ -38,3 +38,8 @@
   text-align: center;
   opacity: 0.5;
 }
+
+.contact_btn_container {
+  display: flex;
+  place-content: center;
+}
