@@ -27,7 +27,10 @@ const Header = () => {
         <div className="header__top">
           <div className="header_top_wrap container">
             <a href="/" className="header__logo">
-              <span>Amine Zegmou</span>
+              <img
+                src={process.env.PUBLIC_URL + "assets/imgs/logo_v2.svg"}
+                alt="logo"
+              />
             </a>
             <button
               className="header__menu"

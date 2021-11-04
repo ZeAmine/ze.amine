@@ -24,8 +24,8 @@
 
 .header__logo {
   display: inline-flex;
-  width: auto;
-  height: 100%;
+  width: 6rem;
+  height: auto;
   place-items: center;
 }
 
