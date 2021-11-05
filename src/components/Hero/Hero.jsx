@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { RiMailLine } from "react-icons/all";
 import "./Hero.css";
 
 const Hero = () => {
+  //   const [client, setClient] = useState("")
+  // }
+  //   const imgMouse = useRef();
+  //   const imgDivider = 15;
+  //
+  //   useEffect(() => {
+  //     const mDown = (e) => {
+  //       const translateY = client;
+  //       const translateX = client;
+  //       imgMouse.current.style.transform
+  //     };
+  //     const addEventListeners = () => {
+  //       document.addEventListener("mousemove", mDown);
+  //     };
+  //     const removeEventListeners = () => {
+  //       document.removeEventListener("mousemove", mDown);
+  //     };
+  //
+  //     addEventListeners();
+  //     return () => removeEventListeners();
+  //   }, []);
+  //
+  //   const mMouv = (e) => {
+  //     setClient({x: e.clientY - document.documentElement.clientHeight / 2, y: e.clientX - document.documentElement.clientWidth / 2})
+  //   }
+
   return (
-    <section className="hero">
+    <section className="hero" id="accueil">
       <div className="hero__wrap container">
         <div className="hero__name">
           <h3>Je m'appelle Amine Zegmou</h3>

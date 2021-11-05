@@ -5,8 +5,13 @@ import "./Header.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [mode, setMode] = useState(false);
+  const [translate, setTranslate] = useState(false);
+
+  console.log(translate);
 
   const linksContainer = useRef(null);
+
   useEffect(() => {
     if (showMenu) {
       linksContainer.current.style.height = "3rem";
@@ -29,11 +34,10 @@ const Header = () => {
     navCursor.current.style.width = clientWidth + "px";
   };
 
-  // const handleMouseEnterNavItem = (e) => {
-  //   const { offsetLeft, clientWidth } = e.target;
-  //   navCursor.current.style.left = offsetLeft + "px";
-  //   navCursor.current.style.width = clientWidth + "px";
-  // };
+  const handleMoveIcon = () => {
+    setMode(!mode);
+    setTranslate(!translate);
+  };
 
   return (
     <header className="header" id="header">
@@ -46,12 +50,40 @@ const Header = () => {
                 alt="logo"
               />
             </a>
-            <div className="header__buttons" onClick={}>
-              <button className="header__mode">
+            <div className="header__buttons">
+              <button className="header__mode" onClick={handleMoveIcon}>
+                {/*<div className="header_mode_container">*/}
+                {/*  {mode ? (*/}
+                {/*    <RiSunLine*/}
+                {/*      className={*/}
+                {/*        translate*/}
+                {/*          ? "header_mode_icon active"*/}
+                {/*          : "header_mode_icon"*/}
+                {/*      }*/}
+                {/*      ref={sun}*/}
+                {/*    />*/}
+                {/*  ) : (*/}
+                {/*    <RiMoonLine*/}
+                {/*      className={*/}
+                {/*        !translate*/}
+                {/*          ? "header_mode_icon active"*/}
+                {/*          : "header_mode_icon"*/}
+                {/*      }*/}
+                {/*      ref={moon}*/}
+                {/*    />*/}
+                {/*  )}*/}
+                {/*</div>*/}
                 <div className="header_mode_container">
-                  <RiSunLine className="header_mode_icon" />
-                  {/*<RiMoonLine className="header_mode_icon" />*/}
-                  {/*<RiStarSLine className="header_mode_icon" />*/}
+                  <div
+                    className={
+                      translate
+                        ? "header_icon_container active"
+                        : "header_icon_container"
+                    }
+                  >
+                    <RiSunLine className="header_mode_icon" />
+                    <RiMoonLine className="header_mode_icon" />
+                  </div>
                 </div>
               </button>
               <button
@@ -70,9 +102,11 @@ const Header = () => {
               {links.map(({ id, url, text }) => {
                 return (
                   <li key={id} className="header__item">
-                    <span ref={navItems} onClick={handleMouseEnterNavItem}>
-                      {text}
-                    </span>
+                    <a href={url}>
+                      <span ref={navItems} onClick={handleMouseEnterNavItem}>
+                        {text}
+                      </span>
+                    </a>
                   </li>
                 );
               })}

@@ -174,12 +174,27 @@
   display: flex;
   place-content: center;
   place-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  overflow: hidden;
+  height: 1rem;
+  /*overflow: hidden;*/
+}
+
+.header_icon_container {
+  display: inline-flex;
+  place-content: center;
+  place-items: center;
+  width: 2rem;
+  height: 100%;
+  transform: translateX(0px);
+  transition: all 200ms ease 200ms;
+}
+.header_icon_container.active {
+  transform: translateX(-30px);
+  transition: all 200ms ease 200ms;
 }
 
 .header_mode_icon {
   font-size: 1.25rem;
   color: var(--clr-lightgray);
+  transform: translateX(0px);
+  transition: all 200ms ease 200ms;
 }
