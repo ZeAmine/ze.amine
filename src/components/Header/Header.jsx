@@ -46,22 +46,21 @@ const Header = () => {
                 alt="logo"
               />
             </a>
-            <button
-              className="header__mode"
-              onClick={() => setShowMenu(!showMenu)}
-            >
-              <div className="header_mode_container">
-                <RiSunLine className="header_mode_icon" />
-                <RiMoonLine className="header_mode_icon" />
-                <RiStarSLine className="header_mode_icon" />
-              </div>
-            </button>
-            <button
-              className="header__menu"
-              onClick={() => setShowMenu(!showMenu)}
-            >
-              <div className="header__line" />
-            </button>
+            <div className="header__buttons" onClick={}>
+              <button className="header__mode">
+                <div className="header_mode_container">
+                  <RiSunLine className="header_mode_icon" />
+                  {/*<RiMoonLine className="header_mode_icon" />*/}
+                  {/*<RiStarSLine className="header_mode_icon" />*/}
+                </div>
+              </button>
+              <button
+                className="header__menu"
+                onClick={() => setShowMenu(!showMenu)}
+              >
+                <div className="header__line" />
+              </button>
+            </div>
           </div>
         </div>
         <div className="header__bottom" ref={linksContainer}>
