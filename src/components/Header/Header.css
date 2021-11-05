@@ -1,4 +1,7 @@
 .header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -33,22 +36,81 @@
   display: inline-flex;
 }
 
-/*-------Menu*/
-.header__menu {
+/*--------ButtonMode*/
+.header__mode {
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-left: 1rem;
+  padding: 12px 21px;
+  border-radius: 50px;
+  border: 2px solid var(--clr-lightgray);
   background-color: transparent;
-  transition: background 200ms ease;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.header__mode:hover {
+  background-color: var(--clr-gray);
+  border: 2px solid var(--clr-gray);
+}
+
+.header_mode_container {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 2rem;
+  height: 1.25rem;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.header_icon_container {
+  position: absolute;
+  display: inline-flex;
+  place-content: space-between;
+  place-items: center;
+  width: 4rem;
+  height: 100%;
+  transform: translateX(22px);
+  transition: var(--transition) 200ms;
+}
+.header_icon_container.active {
+  transform: translateX(-22px);
+  transition: var(--transition) 200ms;
+}
+
+.header_mode_icon {
+  width: 1.25rem;
+  color: var(--clr-lightgray);
+}
+
+/*-------Menu*/
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 21px;
+  margin-left: 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--clr-lightgray);
+  background-color: transparent;
+  transition: background 200ms;
   cursor: pointer;
 }
 
 .header__menu:hover {
   background-color: var(--clr-gray);
+  border: 2px solid var(--clr-gray);
+}
+
+.header_line_container {
+  display: inline-flex;
+  place-content: center;
+  place-items: center;
+  width: 2rem;
+  height: 1.25rem;
 }
 
 .header__line::before {
@@ -56,16 +118,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
+  width: 12px;
   height: 2px;
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  transition: var(--transition);
   background-color: var(--clr-lightgray);
 }
 
 .header__line {
   position: relative;
-  width: 20px;
+  width: 12px;
   height: 2px;
+  transform: rotate(90deg);
+  transition: var(--transition) 150ms;
   background-color: var(--clr-lightgray);
 }
 
@@ -74,10 +139,24 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
+  width: 12px;
   height: 2px;
-  transform: translateY(6px);
+  transform: translateY(5px);
+  transition: var(--transition);
   background-color: var(--clr-lightgray);
+}
+
+.header__line.active {
+  transform: rotate(0);
+  width: 7px;
+}
+.header__line.active::after {
+  left: -5px;
+  width: 7px;
+}
+.header__line.active::before {
+  left: 5px;
+  width: 7px;
 }
 
 .header__buttons {
@@ -104,10 +183,10 @@
   place-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
   border-bottom: 1px solid var(--clr-gray);
   background-color: #181818;
   transition: var(--transition);
+  overflow: hidden;
   z-index: 9999;
 }
 
@@ -121,11 +200,9 @@
 
 .header_nav_cursor {
   position: absolute;
-  top: 8px;
-  height: 2rem;
-  border-radius: 3rem;
-  background-color: var(--clr-primary-1);
-  transition: var(--transition);
+  border-radius: 50px;
+  background-color: var(--clr-gray);
+  transition: all 200ms;
   z-index: -10;
 }
 
@@ -149,52 +226,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--clr-white);
+  border-radius: 50px;
+  padding: 10px 21px;
   line-height: 1.5rem;
-  padding: 1rem;
-}
-
-/*--------ButtonMode*/
-.header__mode {
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: transparent;
-  transition: background 200ms ease;
-  cursor: pointer;
-}
-
-.header__mode:hover {
-  background-color: var(--clr-gray);
-}
-
-.header_mode_container {
-  display: flex;
-  place-content: center;
-  place-items: center;
-  height: 1rem;
-  /*overflow: hidden;*/
-}
-
-.header_icon_container {
-  display: inline-flex;
-  place-content: center;
-  place-items: center;
-  width: 2rem;
-  height: 100%;
-  transform: translateX(0px);
-  transition: all 200ms ease 200ms;
-}
-.header_icon_container.active {
-  transform: translateX(-30px);
-  transition: all 200ms ease 200ms;
-}
-
-.header_mode_icon {
-  font-size: 1.25rem;
-  color: var(--clr-lightgray);
-  transform: translateX(0px);
-  transition: all 200ms ease 200ms;
 }

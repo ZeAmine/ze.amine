@@ -1,42 +1,38 @@
 import React, { useEffect, useState, useRef } from "react";
 import { links } from "../../data";
-import { RiMoonLine, RiSunLine, RiStarSLine } from "react-icons/all";
+import { RiMoonLine, RiSunLine } from "react-icons/all";
 import "./Header.css";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [mode, setMode] = useState(false);
   const [translate, setTranslate] = useState(false);
-
-  console.log(translate);
+  const [animMenu, setAnimMenu] = useState(false);
 
   const linksContainer = useRef(null);
-
   useEffect(() => {
     if (showMenu) {
-      linksContainer.current.style.height = "3rem";
+      linksContainer.current.style.height = "3.75rem";
       linksContainer.current.style.opacity = "1";
       navCursor.current.style.opacity = "1";
-      navCursor.current.style.transform = "translateY(0)";
     } else {
       linksContainer.current.style.height = "0";
       linksContainer.current.style.opacity = "0";
       navCursor.current.style.opacity = "0";
-      navCursor.current.style.transform = "translateY(-20px)";
     }
   }, [showMenu]);
 
   const navCursor = useRef(null);
   const navItems = useRef(null);
   const handleMouseEnterNavItem = (e) => {
-    const { offsetLeft, clientWidth } = e.target;
+    const { offsetLeft, clientWidth, clientHeight } = e.target;
     navCursor.current.style.left = offsetLeft + "px";
     navCursor.current.style.width = clientWidth + "px";
+    navCursor.current.style.height = clientHeight + "px";
   };
 
-  const handleMoveIcon = () => {
-    setMode(!mode);
-    setTranslate(!translate);
+  const handleLineMenu = () => {
+    setShowMenu(!showMenu);
+    setAnimMenu(!animMenu);
   };
 
   return (
@@ -51,28 +47,10 @@ const Header = () => {
               />
             </a>
             <div className="header__buttons">
-              <button className="header__mode" onClick={handleMoveIcon}>
-                {/*<div className="header_mode_container">*/}
-                {/*  {mode ? (*/}
-                {/*    <RiSunLine*/}
-                {/*      className={*/}
-                {/*        translate*/}
-                {/*          ? "header_mode_icon active"*/}
-                {/*          : "header_mode_icon"*/}
-                {/*      }*/}
-                {/*      ref={sun}*/}
-                {/*    />*/}
-                {/*  ) : (*/}
-                {/*    <RiMoonLine*/}
-                {/*      className={*/}
-                {/*        !translate*/}
-                {/*          ? "header_mode_icon active"*/}
-                {/*          : "header_mode_icon"*/}
-                {/*      }*/}
-                {/*      ref={moon}*/}
-                {/*    />*/}
-                {/*  )}*/}
-                {/*</div>*/}
+              <button
+                className="header__mode"
+                onClick={() => setTranslate(!translate)}
+              >
                 <div className="header_mode_container">
                   <div
                     className={
@@ -86,11 +64,14 @@ const Header = () => {
                   </div>
                 </div>
               </button>
-              <button
-                className="header__menu"
-                onClick={() => setShowMenu(!showMenu)}
-              >
-                <div className="header__line" />
+              <button className="header__menu" onClick={handleLineMenu}>
+                <div className="header_line_container">
+                  <div
+                    className={
+                      animMenu ? "header__line active" : "header__line"
+                    }
+                  />
+                </div>
               </button>
             </div>
           </div>

@@ -87,11 +87,16 @@
   display: flex;
   place-content: center;
   place-items: center;
-  border-radius: 15px;
-  padding: 1rem 1rem 1rem 1.2rem;
-  background-color: var(--clr-gray);
-  transition: background 200ms;
+  padding: 12px 16px 12px 21px;
+  border-radius: 50px;
+  border: 2px solid var(--clr-lightgray);
+  transition: all 200ms;
+  background-color: transparent;
   cursor: pointer;
+}
+.footer_back_btn:hover {
+  background-color: var(--clr-gray);
+  border: 2px solid var(--clr-gray);
 }
 
 .footer_back_btn span {
