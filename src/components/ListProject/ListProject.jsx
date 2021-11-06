@@ -4,9 +4,9 @@ import { RiLinkM, VscGithub } from "react-icons/all";
 
 const ListProject = ({ id, num, url, title, text, language, direction }) => {
   return (
-    <article className="project__item">
-      <div className={direction ? "project_item_wrap reverse" : "project_item_wrap"}>
-        <div className={direction ? "project_content_right reverse" : "project_content_right"}>
+    <article className={direction ? "project_item_reverse" : "project__item"}>
+      <div className={direction ? "project_item_wrap_reverse" : "project_item_wrap"}>
+        <div className={direction ? "project_content_right_reverse" : "project_content_right"}>
           <ul className="project__links">
             <li className="project_item_link">
               <a
@@ -39,7 +39,6 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
             </div>
           </div>
         </div>
-
         <div className="project_content_left">
           <div className="project__title">
             <h2>{title}</h2>

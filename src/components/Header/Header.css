@@ -1,3 +1,7 @@
+.header {
+  width: 100vw;
+}
+
 .header__nav {
   position: fixed;
   top: 0;
@@ -5,11 +9,13 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  height: auto;
   z-index: 9999;
 }
 
 /*----------TOP*/
 .header__top {
+  display: inline-block;
   width: 100%;
   height: 5rem;
   border-bottom: 1px solid var(--clr-gray);
@@ -83,7 +89,7 @@
 
 .header_mode_icon {
   width: 1.25rem;
-  color: var(--clr-lightgray);
+  color: var(--clr-white);
 }
 
 /*-------Menu*/
@@ -122,7 +128,7 @@
   height: 2px;
   transform: translateY(-5px);
   transition: var(--transition);
-  background-color: var(--clr-lightgray);
+  background-color: var(--clr-white);
 }
 
 .header__line {
@@ -131,7 +137,7 @@
   height: 2px;
   transform: rotate(90deg);
   transition: var(--transition) 150ms;
-  background-color: var(--clr-lightgray);
+  background-color: var(--clr-white);
 }
 
 .header__line::after {
@@ -143,7 +149,7 @@
   height: 2px;
   transform: translateY(5px);
   transition: var(--transition);
-  background-color: var(--clr-lightgray);
+  background-color: var(--clr-white);
 }
 
 .header__line.active {
@@ -159,24 +165,6 @@
   width: 7px;
 }
 
-.header__buttons {
-  display: flex;
-  margin-left: 1rem;
-}
-
-.header__dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 3px solid var(--clr-white);
-  margin: 0 5px;
-  background: var(--clr-white);
-  cursor: pointer;
-}
-.header__dot.active {
-  background-color: var(--clr-primary-1);
-}
-
 /*----------BOTTOM*/
 .header__bottom {
   display: flex;
@@ -184,7 +172,7 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid var(--clr-gray);
-  background-color: #181818;
+  background-color: var(--clr-bg);
   transition: var(--transition);
   overflow: hidden;
   z-index: 9999;
@@ -229,4 +217,33 @@
   border-radius: 50px;
   padding: 10px 21px;
   line-height: 1.5rem;
+}
+
+
+
+@media (max-width: 1280px) {
+  .header_top_wrap {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header_top_wrap {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_top_wrap {
+    padding: 0 1rem;
+  }
+  .header__list li:not(:last-of-type) {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header_top_wrap {
+    padding: 0 1rem;
+  }
 }

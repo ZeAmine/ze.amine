@@ -50,8 +50,10 @@ const Footer = () => {
           </div>
           <div className="footer__back">
             <button className="footer_back_btn">
-              <span>Haut de page</span>
-              <RiArrowUpSLine className="footer_back_icon" />
+              <div className="footer_back_btn_container">
+                <span>Haut de page</span>
+                <RiArrowUpSLine className="footer_back_icon" />
+              </div>
             </button>
           </div>
         </div>

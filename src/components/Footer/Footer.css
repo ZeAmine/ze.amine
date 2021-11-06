@@ -84,10 +84,6 @@
 .footer_back_btn {
   outline: none;
   font-family: var(--font-primary-1);
-  display: flex;
-  place-content: center;
-  place-items: center;
-  padding: 12px 16px 12px 21px;
   border-radius: 50px;
   border: 2px solid var(--clr-lightgray);
   transition: all 200ms;
@@ -97,6 +93,13 @@
 .footer_back_btn:hover {
   background-color: var(--clr-gray);
   border: 2px solid var(--clr-gray);
+}
+
+.footer_back_btn_container {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  padding: 12px 16px 12px 21px;
 }
 
 .footer_back_btn span {
@@ -116,4 +119,49 @@
   white-space: nowrap;
   margin-left: 0.6rem;
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .footer__nav {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10vw 0;
+    margin-top: 5vh;
+  }
+  .footer__back {
+    display: flex;
+    place-content: flex-start;
+    place-items: flex-start;
+  }
+  .footer_social_title h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .footer_social_item a {
+    width: 3rem;
+    height: 3rem;
+  }
+  .footer_social_icon {
+    width: 1.875rem;
+    color: var(--clr-bg);
+  }
+
+  .footer_contact_title h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .footer_contact_mail a {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .footer_back_btn_container {
+    padding: 16px 20px 16px 28px;
+  }
+  .footer_back_btn span {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }

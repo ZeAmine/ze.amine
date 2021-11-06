@@ -10,7 +10,6 @@ import "./Home.css";
 const Home = () => {
   return (
     <>
-      {/*<Navbar />*/}
       <Header />
       <main className="main">
         <div className="main__wrap">
