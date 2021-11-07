@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="main">
+      <main className="main" id="home">
         <div className="main__wrap">
           <Hero />
           <Projects />

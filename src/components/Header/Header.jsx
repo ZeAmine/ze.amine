@@ -8,6 +8,7 @@ const Header = () => {
   const [translate, setTranslate] = useState(false);
   const [animMenu, setAnimMenu] = useState(false);
   const [active, setActive] = useState(0)
+  const [hoverLogo, setHoverLogo] = useState(false)
 
   const linksContainer = useRef(null);
   useEffect(() => {
@@ -37,15 +38,20 @@ const Header = () => {
   };
 
   return (
-    <header className="header" id="header">
+    <header className="header">
       <nav className="header__nav">
         <div className="header__top">
           <div className="header_top_wrap container">
-            <a href="/" className="header__logo">
-              <img
-                src={process.env.PUBLIC_URL + "assets/imgs/logo_v2.svg"}
-                alt="logo"
-              />
+            <a href="#home" className={hoverLogo ? "header__logo over" : "header__logo leave"} onMouseOver={() => setHoverLogo(true)} onMouseLeave={() => setHoverLogo(false)}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.89 55.82">
+                <g id="Logo">
+                  <g className="symbole">
+                    <line className="cls-1" y1="52.04" x2="55.43" y2="52.04"/>
+                    <path className="cls-1" d="M15.36,3.77,51.75,4V40.54H4C4,20,9.16,15.37,22.82,15.37s19.45,4.7,19.45,25.17"/>
+                  </g>
+                  <text className={hoverLogo ? "cls-2 over" : "cls-2 leave"} transform="translate(74.19 44.49)">Amine</text>
+                </g>
+              </svg>
             </a>
             <div className="header__buttons">
               <button
