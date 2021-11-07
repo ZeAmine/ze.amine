@@ -113,7 +113,6 @@ svg {
   --site-width-sm: 90vw;
 
   --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
-  --image-filter: grayscale(50%);
 }
 
 [data-theme="clear"] {
@@ -148,7 +147,6 @@ svg {
   --site-width-sm: 90vw;
 
   --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
-  --image-filter: grayscale(50%);
 }
 
 @media (min-width: 1536px) {
