@@ -4,11 +4,20 @@ import { RiMoonLine, RiSunLine } from "react-icons/all";
 import "./Header.css";
 
 const Header = () => {
+  const [theme, setTheme] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [translate, setTranslate] = useState(false);
-  const [animMenu, setAnimMenu] = useState(false);
-  const [active, setActive] = useState(0)
-  const [hoverLogo, setHoverLogo] = useState(false)
+  const [lineMenu, setLineMenu] = useState(false);
+  const [active, setActive] = useState(0);
+  const [hoverLogo, setHoverLogo] = useState(false);
+
+  useEffect(() => {
+    if (!theme) {
+      document.documentElement.setAttribute("data-theme", "default");
+    } else {
+      document.documentElement.setAttribute("data-theme", "clear");
+    }
+  }, [theme]);
 
   const linksContainer = useRef(null);
   useEffect(() => {
@@ -32,9 +41,14 @@ const Header = () => {
     navCursor.current.style.height = clientHeight + "px";
   };
 
-  const handleLineMenu = () => {
+  const handleAnimMenu = () => {
     setShowMenu(!showMenu);
-    setAnimMenu(!animMenu);
+    setLineMenu(!lineMenu);
+  };
+
+  const handleAnimMode = () => {
+    setTranslate(!translate);
+    setTheme(!theme);
   };
 
   return (
@@ -42,22 +56,35 @@ const Header = () => {
       <nav className="header__nav">
         <div className="header__top">
           <div className="header_top_wrap container">
-            <a href="#home" className={hoverLogo ? "header__logo over" : "header__logo leave"} onMouseOver={() => setHoverLogo(true)} onMouseLeave={() => setHoverLogo(false)}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.89 55.82">
+            <a
+              href="#home"
+              className={hoverLogo ? "header__logo over" : "header__logo leave"}
+              onMouseOver={() => setHoverLogo(true)}
+              onMouseLeave={() => setHoverLogo(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 223.89 55.82"
+              >
                 <g id="Logo">
                   <g className="symbole">
-                    <line className="cls-1" y1="52.04" x2="55.43" y2="52.04"/>
-                    <path className="cls-1" d="M15.36,3.77,51.75,4V40.54H4C4,20,9.16,15.37,22.82,15.37s19.45,4.7,19.45,25.17"/>
+                    <line className="cls-1" y1="52.04" x2="55.43" y2="52.04" />
+                    <path
+                      className="cls-1"
+                      d="M15.36,3.77,51.75,4V40.54H4C4,20,9.16,15.37,22.82,15.37s19.45,4.7,19.45,25.17"
+                    />
                   </g>
-                  <text className={hoverLogo ? "cls-2 over" : "cls-2 leave"} transform="translate(74.19 44.49)">Amine</text>
+                  <text
+                    className={hoverLogo ? "cls-2 over" : "cls-2 leave"}
+                    transform="translate(74.19 44.49)"
+                  >
+                    Amine
+                  </text>
                 </g>
               </svg>
             </a>
             <div className="header__buttons">
-              <button
-                className="header__mode"
-                onClick={() => setTranslate(!translate)}
-              >
+              <button className="header__mode" onClick={handleAnimMode}>
                 <div className="header_mode_container">
                   <div
                     className={
@@ -71,11 +98,11 @@ const Header = () => {
                   </div>
                 </div>
               </button>
-              <button className="header__menu" onClick={handleLineMenu}>
+              <button className="header__menu" onClick={handleAnimMenu}>
                 <div className="header_line_container">
                   <div
                     className={
-                      animMenu ? "header__line active" : "header__line"
+                      lineMenu ? "header__line active" : "header__line"
                     }
                   />
                 </div>
@@ -89,9 +116,21 @@ const Header = () => {
             <ul className="header__list">
               {links.map(({ id, url, text }) => {
                 return (
-                  <li key={id} onClick={() => setActive(id)} className="header__item">
+                  <li
+                    key={id}
+                    onClick={() => setActive(id)}
+                    className="header__item"
+                  >
                     <a href={url}>
-                      <span ref={navItems} className={id === active ? "header_item_text active" : "header_item_text"} onClick={handleMouseEnterNavItem}>
+                      <span
+                        ref={navItems}
+                        className={
+                          id === active
+                            ? "header_item_text active"
+                            : "header_item_text"
+                        }
+                        onClick={handleMouseEnterNavItem}
+                      >
                         {text}
                       </span>
                     </a>

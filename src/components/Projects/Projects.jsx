@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { projects } from "../../data";
 import ListProject from "../ListProject/ListProject";
 import "./Projects.css";

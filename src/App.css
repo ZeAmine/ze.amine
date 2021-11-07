@@ -95,21 +95,12 @@ svg {
   --size-title-footer: 1rem;
   --size-text-footer: 1rem;
 
-  --clr-primary-1: #FC480E;
-  --clr-primary-2: #DACFC0;
-  --clr-primary-3: #DACFC0B2;
+  --clr-primary-1: #fc480e;
+  --clr-primary-2: #dacfc0;
+  --clr-primary-3: #dacfc0b2;
   --clr-hf: #131313;
   --clr-bg: #181818;
   --clr-bg-2: #242424;
-
-  /*--clr-primary-1: #f5832b;*/
-  /*--clr-bg: #181818;*/
-  /*--clr-bg-2: #242424;*/
-  /*--clr-white: #ffffff;*/
-  /*--clr-black: #000000;*/
-  /*--clr-gray: #2a2a2a;*/
-  /*--clr-lightgray: #8c8c8c;*/
-
 
   --font-primary-1: GT Walsheim Pro, sans-serif;
   --font-primary-2: Basis Grotesque Pro, sans-serif;
@@ -121,30 +112,44 @@ svg {
   --site-width-md: 85vw;
   --site-width-sm: 90vw;
 
-  --transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
   --image-filter: grayscale(50%);
 }
 
-/*[data-theme="dark"] {*/
-/*  --clr-bg: #dbdbdb;*/
-/*  --clr-primary-1: #8DF425;*/
-/*  --clr-primary-2: #f5410a;*/
-/*  --clr-primary-1-rgb: 0, 0, 0;*/
-/*  --clr-white: #ffffff;*/
-/*  --clr-black: #000000;*/
+[data-theme="clear"] {
+  --size-text-header: 1rem;
+  --size-title-section: 5rem;
+  --size-subtitle-hero: 1.25rem;
+  --size-text-hero: 1.25rem;
+  --size-title-project: 1.5rem;
+  --size-text-project: 1.125rem;
+  --size-info-project: 0.875rem;
+  --size-title-contact: 3.75rem;
+  --size-text-contact: 1.25rem;
+  --size-text-btn: 2rem;
+  --size-title-footer: 1rem;
+  --size-text-footer: 1rem;
 
-/*  --font-1: GT Walsheim Pro, sans-serif;*/
+  --clr-primary-1: #fc480e;
+  --clr-primary-2: #000000;
+  --clr-primary-3: #242424;
+  --clr-hf: #e5e5e5;
+  --clr-bg: #ffffff;
+  --clr-bg-2: #efeff1;
 
-/*  --transition: 300ms cubic-bezier(0.16, 1, 0.3, 1);*/
-/*  --site-width: 40vw;*/
-/*}*/
+  --font-primary-1: GT Walsheim Pro, sans-serif;
+  --font-primary-2: Basis Grotesque Pro, sans-serif;
 
-/*@media (min-width: 1536px) {*/
-/*  .container {*/
-/*    max-width: var(--site-width);*/
-/*    margin: 0 auto;*/
-/*  }*/
-/*}*/
+  --site-width: 50vw;
+  --site-width-2xl: 70vw;
+  --site-width-xl: 75vw;
+  --site-width-lg: 80vw;
+  --site-width-md: 85vw;
+  --site-width-sm: 90vw;
+
+  --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  --image-filter: grayscale(50%);
+}
 
 @media (min-width: 1536px) {
   .container {
