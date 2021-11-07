@@ -71,7 +71,7 @@
   height: 10rem;
   outline: 1px solid var(--clr-primary-1);
   transition: all 300ms ease-in-out;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 .project__img:hover {
   outline: 6px solid var(--clr-primary-1);
@@ -240,6 +240,12 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .project_img_container img {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (max-width: 768px) {
@@ -265,5 +271,11 @@
   .project__img {
     width: 90vw;
     height: 21rem;
+  }
+  .project_img_container img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

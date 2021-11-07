@@ -18,21 +18,21 @@ const Hero = () => {
           <div className="hero_content_container">
             <div className="hero_text_container">
               <p className="hero__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                rhoncus viverra ante, id tincidunt turpis placerat vitae
-                suspendisse sollicitudin sodales nulla, in euismod ex mattis sit
-                amet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas rhoncus viverra ante, id tincidunt turpis placerat
+                vitae suspendisse sollicitudin sodales nulla, in euismod ex
+                mattis sit amet.
               </p>
             </div>
             <div className="hero__contact">
               <a href="/" className="hero_contact_container">
                 <button className="button__contact">
-                    <div className="icon__container">
-                      <RiMailLine className="icon__contact" />
-                    </div>
-                    <span className="mail__contact">
-                      <h4>amine.zegmou@gmail.com</h4>
-                    </span>
+                  <div className="icon__container">
+                    <RiMailLine className="icon__contact" />
+                  </div>
+                  <span className="mail__contact">
+                    <h4>amine.zegmou@gmail.com</h4>
+                  </span>
                 </button>
               </a>
             </div>
@@ -40,8 +40,8 @@ const Hero = () => {
         </div>
         <div className="hero_img_bg">
           <img
-              src={process.env.PUBLIC_URL + "/assets/imgs/abstract_image.png"}
-              alt="forme abstraite"
+            src={process.env.PUBLIC_URL + "/assets/imgs/abstract_image.png"}
+            alt="forme abstraite"
           />
         </div>
       </div>

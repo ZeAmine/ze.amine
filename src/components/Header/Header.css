@@ -50,7 +50,7 @@
 .header__logo .cls-1 {
   stroke: var(--clr-primary-2);
   fill: none;
-  stroke-miterlimit:10;
+  stroke-miterlimit: 10;
   stroke-width: 8px;
 }
 
@@ -58,8 +58,7 @@
   font-family: var(--font-1);
   font-size: 50px;
   font-weight: bold;
-  fill:var(--clr-primary-2);
-
+  fill: var(--clr-primary-2);
 }
 
 .header__logo .cls-2.over {
@@ -73,9 +72,6 @@
   transform: translate(40px, 44px);
   transition: all 200ms;
 }
-
-
-
 
 /*---------Buttons*/
 .header__buttons {
@@ -273,7 +269,6 @@
 .header_item_text.active > .header_nav_cursor {
   background-color: var(--clr-primary-1);
 }
-
 
 @media (max-width: 1280px) {
   .header_top_wrap {

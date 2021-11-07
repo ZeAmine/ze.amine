@@ -127,7 +127,6 @@
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
   .footer {
     height: 45vh;
