@@ -96,13 +96,21 @@ svg {
   --size-title-footer: 1rem;
   --size-text-footer: 1rem;
 
-  --clr-primary-1: #f5832b;
+  --clr-primary-1: #FC480E;
+  --clr-primary-2: #DACFC0;
+  --clr-primary-3: #DACFC0B2;
+  --clr-hf: #131313;
   --clr-bg: #181818;
   --clr-bg-2: #242424;
-  --clr-white: #ffffff;
-  --clr-black: #000000;
-  --clr-gray: #2a2a2a;
-  --clr-lightgray: #8c8c8c;
+
+  /*--clr-primary-1: #f5832b;*/
+  /*--clr-bg: #181818;*/
+  /*--clr-bg-2: #242424;*/
+  /*--clr-white: #ffffff;*/
+  /*--clr-black: #000000;*/
+  /*--clr-gray: #2a2a2a;*/
+  /*--clr-lightgray: #8c8c8c;*/
+
 
   --font-primary-1: GT Walsheim Pro, sans-serif;
   --font-primary-2: Basis Grotesque Pro, sans-serif;
@@ -120,7 +128,7 @@ svg {
 
 /*[data-theme="dark"] {*/
 /*  --clr-bg: #dbdbdb;*/
-/*  --clr-primary-1: #000;*/
+/*  --clr-primary-1: #8DF425;*/
 /*  --clr-primary-2: #f5410a;*/
 /*  --clr-primary-1-rgb: 0, 0, 0;*/
 /*  --clr-white: #ffffff;*/
@@ -146,12 +154,12 @@ svg {
   }
   .button__contact {
     height: 80px;
-    border: 3px solid var(--clr-lightgray);
+    border: 3px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 70%;
     padding: 0 2.5rem;
-    border-right: 2px solid var(--clr-lightgray);
+    border-right: 2px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 2.5rem;
@@ -165,12 +173,12 @@ svg {
   }
   .button__contact {
     height: 80px;
-    border: 3px solid var(--clr-lightgray);
+    border: 3px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 70%;
     padding: 0 2.5rem;
-    border-right: 2px solid var(--clr-lightgray);
+    border-right: 2px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 2.5rem;
@@ -184,12 +192,12 @@ svg {
   }
   .button__contact {
     height: 80px;
-    border: 3px solid var(--clr-lightgray);
+    border: 3px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 70%;
     padding: 0 2.5rem;
-    border-right: 2px solid var(--clr-lightgray);
+    border-right: 2px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 2.5rem;
@@ -207,12 +215,12 @@ svg {
   }
   .button__contact {
     height: 65px;
-    border: 2px solid var(--clr-lightgray);
+    border: 2px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 60%;
     padding: 0 2rem;
-    border-right: 1px solid var(--clr-lightgray);
+    border-right: 1px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 2rem;
@@ -230,12 +238,12 @@ svg {
   }
   .button__contact {
     height: 65px;
-    border: 2px solid var(--clr-lightgray);
+    border: 2px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 60%;
     padding: 0 2rem;
-    border-right: 1px solid var(--clr-lightgray);
+    border-right: 1px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 2rem;
@@ -253,16 +261,20 @@ svg {
   }
   .button__contact {
     height: 60px;
-    border: 2px solid var(--clr-lightgray);
+    border: 2px solid var(--clr-primary-3);
   }
   .icon__container {
     height: 60%;
     padding: 0 1.75rem;
-    border-right: 1px solid var(--clr-lightgray);
+    border-right: 1px solid var(--clr-primary-3);
   }
   .mail__contact {
     padding-right: 1.75rem;
   }
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 .section {
@@ -277,7 +289,7 @@ svg {
 .section__title h1 {
   font-size: var(--size-title-section);
   font-weight: bold;
-  color: var(--clr-white);
+  color: var(--clr-primary-2);
   line-height: 1;
 }
 
@@ -300,15 +312,11 @@ svg {
 
 .icon__contact {
   width: 1.25rem;
-  color: var(--clr-white);
-}
-
-.mail__contact {
-  /*padding-right: 2.5rem;*/
+  color: var(--clr-primary-2);
 }
 
 .mail__contact h4 {
   font-size: var(--size-text-btn);
   font-weight: 500;
-  color: var(--clr-white);
+  color: var(--clr-primary-2);
 }

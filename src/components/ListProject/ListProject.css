@@ -50,17 +50,18 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: var(--clr-lightgray);
-  transition: background 200ms;
+  background-color: var(--clr-primary-3);
+  transition: all 200ms;
+}
+.project_item_link a:hover {
+  width: 3.75rem;
+  border-radius: 50px;
+  background-color: var(--clr-primary-1);
 }
 
 .project__icon {
   width: 1.25rem;
-  color: var(--clr-gray);
-}
-
-.project_item_link a:hover {
-  background-color: var(--clr-primary-1);
+  color: var(--clr-bg);
 }
 
 /*__________Images*/
@@ -101,14 +102,14 @@
 .project__line {
   width: 45px;
   height: 0;
-  border: 1px solid var(--clr-gray);
+  border: 1px solid var(--clr-primary-3);
   margin: 0 1rem;
 }
 
 .project_info_container span {
   font-size: var(--size-info-project);
   font-weight: 500;
-  color: var(--clr-lightgray);
+  color: var(--clr-primary-3);
   line-height: 1.25rem;
   letter-spacing: 2px;
 }
@@ -118,6 +119,7 @@
   font-weight: 500;
   color: var(--clr-primary-1);
   line-height: 1.5rem;
+  opacity: 1;
 }
 
 /*--------LEFT----------*/
@@ -134,7 +136,7 @@
 .project__title h2 {
   font-size: var(--size-title-project);
   font-weight: 500;
-  color: var(--clr-white);
+  color: var(--clr-primary-2);
   line-height: 2rem;
 }
 
@@ -146,8 +148,9 @@
 .project__text p {
   font-size: var(--size-text-project);
   font-weight: normal;
-  color: var(--clr-lightgray);
+  color: var(--clr-primary-2);
   line-height: 1.75rem;
+  opacity: 0.8;
 }
 
 

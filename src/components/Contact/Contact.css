@@ -20,7 +20,7 @@
 .contact__title h2 {
   font-size: var(--size-title-contact);
   font-weight: bold;
-  color: var(--clr-white);
+  color: var(--clr-primary-2);
   line-height: 1;
   text-align: center;
 }
@@ -33,10 +33,9 @@
 .contact__text p {
   font-size: var(--size-text-contact);
   font-weight: normal;
-  color: var(--clr-white);
+  color: var(--clr-primary-3);
   line-height: 1.75rem;
   text-align: center;
-  opacity: 0.5;
 }
 
 .contact_btn_container {

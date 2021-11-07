@@ -12,6 +12,7 @@ function App() {
 export default App;
 
 //TODO
+//logo footer
 // la taille de la typo
 // ajouter les line-height
 // couleurs

@@ -7,17 +7,18 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [translate, setTranslate] = useState(false);
   const [animMenu, setAnimMenu] = useState(false);
+  const [active, setActive] = useState(0)
 
   const linksContainer = useRef(null);
   useEffect(() => {
     if (showMenu) {
       linksContainer.current.style.height = "3.75rem";
-      linksContainer.current.style.opacity = "1";
       navCursor.current.style.opacity = "1";
+      navItems.current.style.opacity = "1";
     } else {
       linksContainer.current.style.height = "0";
-      linksContainer.current.style.opacity = "0";
       navCursor.current.style.opacity = "0";
+      navItems.current.style.opacity = "0";
     }
   }, [showMenu]);
 
@@ -82,9 +83,9 @@ const Header = () => {
             <ul className="header__list">
               {links.map(({ id, url, text }) => {
                 return (
-                  <li key={id} className="header__item">
+                  <li key={id} onClick={() => setActive(id)} className="header__item">
                     <a href={url}>
-                      <span ref={navItems} onClick={handleMouseEnterNavItem}>
+                      <span ref={navItems} className={id === active ? "header_item_text active" : "header_item_text"} onClick={handleMouseEnterNavItem}>
                         {text}
                       </span>
                     </a>

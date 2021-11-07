@@ -51,8 +51,10 @@ const Footer = () => {
           <div className="footer__back">
             <button className="footer_back_btn">
               <div className="footer_back_btn_container">
-                <span>Haut de page</span>
-                <RiArrowUpSLine className="footer_back_icon" />
+                <a href="#accueil" className="footer_back_btn_link">
+                  <span>Haut de page</span>
+                  <RiArrowUpSLine className="footer_back_icon" />
+                </a>
               </div>
             </button>
           </div>

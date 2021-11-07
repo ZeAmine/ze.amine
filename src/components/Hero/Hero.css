@@ -15,14 +15,14 @@
 
 .hero__line {
   width: 50px;
-  border: 1px solid var(--clr-gray);
+  border: 1px solid var(--clr-primary-2);
   margin: 0 2rem;
 }
 
 .hero__name h3 {
   font-size: var(--size-subtitle-hero);
   font-weight: 500;
-  color: var(--clr-white);
+  color: var(--clr-primary-3);
   line-height: 1.75rem;
 }
 
@@ -35,7 +35,7 @@
 .hero__title h1 {
   font-size: var(--size-title-section);
   font-weight: bold;
-  color: var(--clr-white);
+  color: var(--clr-primary-2);
   line-height: 1;
 }
 
@@ -63,9 +63,8 @@
 .hero__text {
   font-size: var(--size-text-hero);
   font-weight: normal;
-  color: var(--clr-white);
+  color: var(--clr-primary-3);
   line-height: 1.75rem;
-  opacity: 0.5;
 }
 
 /*--------Button*/
