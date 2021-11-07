@@ -1,0 +1,9 @@
+.app-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid var(--clr-primary-1);
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}

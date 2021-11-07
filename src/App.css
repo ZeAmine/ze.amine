@@ -48,6 +48,7 @@
   border: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -56,6 +57,7 @@ body {
   font-family: var(--font-primary-1);
   background-color: var(--clr-bg);
   font-size: 100%;
+  cursor: none;
 }
 
 a,
