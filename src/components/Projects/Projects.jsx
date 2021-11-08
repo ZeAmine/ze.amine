@@ -5,7 +5,7 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <section className="section projects" id="projets">
+    <section className="section projects" id="projects">
       <div className="projects__wrap container">
         <div className="section__title">
           <h1>Liste des projets.</h1>

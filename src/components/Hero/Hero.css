@@ -89,6 +89,7 @@
 .hero_img_bg img {
   transform: rotate(45deg);
   animation: float 6s ease-in-out infinite;
+  filter: blur(3px);
 }
 
 @keyframes float {

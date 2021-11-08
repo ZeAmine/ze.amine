@@ -47,6 +47,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 html {
@@ -57,7 +58,7 @@ body {
   font-family: var(--font-primary-1);
   background-color: var(--clr-bg);
   font-size: 100%;
-  cursor: none;
+  /*cursor: none !important;*/
 }
 
 a,
@@ -134,9 +135,15 @@ svg {
   --clr-primary-1: #fc480e;
   --clr-primary-2: #000000;
   --clr-primary-3: #242424;
-  --clr-hf: #e5e5e5;
-  --clr-bg: #ffffff;
-  --clr-bg-2: #efeff1;
+  --clr-hf: #b6c2cc;
+  --clr-bg: #c2c7cc;
+  --clr-bg-2: #cfd4da;
+  /*--clr-primary-1: #fc480e;*/
+  /*--clr-primary-2: #000000;*/
+  /*--clr-primary-3: #242424;*/
+  /*--clr-hf: #e5e5e5;*/
+  /*--clr-bg: #ffffff;*/
+  /*--clr-bg-2: #efeff1;*/
 
   --font-primary-1: GT Walsheim Pro, sans-serif;
   --font-primary-2: Basis Grotesque Pro, sans-serif;

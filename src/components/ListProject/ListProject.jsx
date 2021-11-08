@@ -1,8 +1,11 @@
 import React from "react";
 import "./ListProject.css";
 import { RiLinkM, VscGithub } from "react-icons/all";
+import { useGlobalContext } from "../../context";
 
 const ListProject = ({ id, num, url, title, text, language, direction }) => {
+  const { toggleCursor } = useGlobalContext();
+
   return (
     <article className={direction ? "project_item_reverse" : "project__item"}>
       <div
@@ -33,7 +36,11 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
               </a>
             </li>
           </ul>
-          <div className="project__img">
+          <div
+            className="project__img"
+            onMouseEnter={toggleCursor}
+            onMouseLeave={toggleCursor}
+          >
             <div className="project_img_container">
               <img
                 src={process.env.PUBLIC_URL + `/assets/imgs/img${id}.png`}

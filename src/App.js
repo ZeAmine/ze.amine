@@ -5,7 +5,7 @@ import Cursor from "./customCursor/cursor";
 function App() {
   return (
     <>
-      {/*<Cursor />*/}
+      <Cursor />
       <Home />
     </>
   );
