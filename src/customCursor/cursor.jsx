@@ -21,19 +21,23 @@ const Cursor = () => {
     // <div className="app-cursor" ref={cursorRef}>
     //   <div className="app-cursor-inner" />
     // </div>
-    <div className="app-cursor">
+    <div
+      className="app-cursor"
+      style={{ mixBlendMode: cursor.active ? "difference" : "" }}
+    >
       <svg
         viewBox="0 0 50 50"
         style={{
           position: "absolute",
-          pointerEvents: "none",
           left: clientX,
           top: clientY,
           transform: `translate(-50%, -50%) scale(${cursor.active ? 2.5 : 1})`,
-          stroke: cursor.active ? "red" : "white",
-          strokeWidth: 1,
-          fill: "transparent",
+          stroke: cursor.active ? "" : "#fc480e",
+          strokeWidth: 1.5,
+          fill: cursor.active ? "white" : "transparent",
           transition: "transform .2s ease-in-out",
+          mixBlendMode: "difference",
+          pointerEvents: "none",
         }}
       >
         <circle cx="25" cy="25" r="8" />

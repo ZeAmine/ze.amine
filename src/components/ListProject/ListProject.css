@@ -69,14 +69,8 @@
   position: relative;
   width: 650px;
   height: 10rem;
-  /*outline: 1px solid var(--clr-primary-1);*/
-  filter: grayscale(50%);
   transition: all 300ms ease-in-out;
   border-radius: 1px;
-}
-.project__img:hover {
-  /*outline: 6px solid var(--clr-primary-1);*/
-  filter: grayscale(0);
 }
 
 .project_img_container {
@@ -85,7 +79,7 @@
   width: inherit;
   border-radius: 8px;
   overflow: hidden;
-  outline: 4px solid var(--clr-bg-2);
+  outline: 1px solid var(--clr-bg);
   cursor: pointer;
 }
 
