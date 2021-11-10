@@ -88,6 +88,10 @@
   top: 140%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 200ms;
+}
+.project_img_container:hover img {
+  filter: grayscale(100%);
 }
 
 /*--------Info*/

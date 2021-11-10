@@ -31,7 +31,7 @@ const Cursor = () => {
           position: "absolute",
           left: clientX,
           top: clientY,
-          transform: `translate(-50%, -50%) scale(${cursor.active ? 2.5 : 1})`,
+          transform: `translate(-50%, -50%) scale(${cursor.active ? 3 : 1})`,
           stroke: cursor.active ? "" : "#fc480e",
           strokeWidth: 1.5,
           fill: cursor.active ? "white" : "transparent",
