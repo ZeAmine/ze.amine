@@ -20,6 +20,7 @@ export const projects = [
   {
     id: 1,
     num: "01",
+    url: "",
     title: "Disney Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API · AXIOS",
@@ -28,6 +29,7 @@ export const projects = [
   {
     id: 2,
     num: "02",
+    url: "",
     title: "Prime Video Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API · AXIOS",
@@ -35,6 +37,7 @@ export const projects = [
   {
     id: 3,
     num: "03",
+    url: "https://react-airbnbapp.netlify.app/",
     title: "Airbnb Clone.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TAILWIND CSS · NEXT.JS",
@@ -43,6 +46,7 @@ export const projects = [
   {
     id: 4,
     num: "04",
+    url: "",
     title: "Awake Koala.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "REACT.JS · TMDB API",
@@ -50,6 +54,7 @@ export const projects = [
   {
     id: 5,
     num: "BONUS 01",
+    url: "",
     title: "Affiche 'Eclipse'.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "PHOTOSHOP · ILLUSTRATOR",
@@ -58,6 +63,7 @@ export const projects = [
   {
     id: 6,
     num: "BONUS 02",
+    url: "",
     title: "Affiche 'Eclipse'.",
     text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
     language: "PHOTOSHOP · ILLUSTRATOR",

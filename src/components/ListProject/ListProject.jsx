@@ -31,7 +31,7 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
               </a>
             </li>
             <li className="project_item_link">
-              <a href="https://www.google.com" rel="noreferrer" target="_blank">
+              <a href={url}>
                 <RiLinkM className="project__icon" />
               </a>
             </li>
@@ -42,10 +42,12 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
             onMouseLeave={toggleCursor}
           >
             <div className="project_img_container">
-              <img
-                src={process.env.PUBLIC_URL + `/assets/imgs/img${id}.png`}
-                alt={title}
-              />
+              <a href={url} rel="noreferrer" target="_blank">
+                <img
+                  src={process.env.PUBLIC_URL + `/assets/imgs/img${id}.png`}
+                  alt={title}
+                />
+              </a>
             </div>
           </div>
           <div className="project__info">
