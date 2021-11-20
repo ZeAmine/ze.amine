@@ -30,13 +30,16 @@
 .hero__title {
   display: inline-block;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero__title h1 {
+  font-family: var(--font-primary-2);
   font-size: var(--size-title-section);
   font-weight: bold;
   color: var(--clr-primary-2);
   line-height: 1;
+  letter-spacing: 1px;
 }
 
 .hero__content {

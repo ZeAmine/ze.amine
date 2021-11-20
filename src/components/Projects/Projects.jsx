@@ -1,16 +1,15 @@
 import React from "react";
-import { projects } from "../../data";
 import ListProject from "../ListProject/ListProject";
 import "./Projects.css";
 
-const Projects = () => {
+const Projects = ({ title, items }) => {
   return (
     <section className="section projects" id="projects">
       <div className="projects__wrap container">
         <div className="section__title">
-          <h1>Liste des projets.</h1>
+          <h1>{title}</h1>
         </div>
-        {projects.map((project, index) => (
+        {items.map((project, index) => (
           <ListProject key={index} {...project} />
         ))}
       </div>

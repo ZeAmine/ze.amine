@@ -114,18 +114,18 @@ const Header = () => {
           <div className="header_bottom_wrap container">
             <div className="header_nav_cursor" ref={navCursor} />
             <ul className="header__list">
-              {links.map(({ id, url, text }) => {
+              {links.map(({ url, text }, index) => {
                 return (
                   <li
-                    key={id}
-                    onClick={() => setActive(id)}
+                    key={index}
+                    onClick={() => setActive(index)}
                     className="header__item"
                   >
                     <a href={url}>
                       <span
                         ref={navItems}
                         className={
-                          id === active
+                          index === active
                             ? "header_item_text active"
                             : "header_item_text"
                         }

@@ -40,6 +40,33 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Integral CF";
+  src: url("assets/fonts/IntegralCF/IntegralCF-Heavy.eot");
+  src: local("Integral CF Heavy"), local("IntegralCF-Heavy"),
+    url("assets/fonts/IntegralCF/IntegralCF-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/IntegralCF/IntegralCF-Heavy.woff2") format("woff2"),
+    url("assets/fonts/IntegralCF/IntegralCF-Heavy.woff") format("woff"),
+    url("assets/fonts/IntegralCF/IntegralCF-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF Heavy Oblique";
+  src: url("assets/fonts/IntegralCF/IntegralCF-HeavyOblique.eot");
+  src: local("Integral CF Heavy Oblique"), local("IntegralCF-HeavyOblique"),
+    url("assets/fonts/IntegralCF/IntegralCF-HeavyOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/IntegralCF/IntegralCF-HeavyOblique.woff2") format("woff2"),
+    url("assets/fonts/IntegralCF/IntegralCF-HeavyOblique.woff") format("woff"),
+    url("assets/fonts/IntegralCF/IntegralCF-HeavyOblique.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
 *,
 *::before,
 *::after {
@@ -106,6 +133,7 @@ svg {
   --clr-bg-2: #242424;
 
   --font-primary-1: GT Walsheim Pro, sans-serif;
+  --font-primary-2: Integral CF, sans-serif;
   --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   --site-width: 50vw;
@@ -138,6 +166,7 @@ svg {
   --clr-bg-2: #cfd4da;
 
   --font-primary-1: GT Walsheim Pro, sans-serif;
+  --font-primary-2: Integral CF, sans-serif;
   --transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 
   --site-width: 50vw;
@@ -146,6 +175,63 @@ svg {
   --site-width-lg: 80vw;
   --site-width-md: 85vw;
   --site-width-sm: 90vw;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+.section {
+  padding-bottom: 10vh;
+}
+
+.section__title {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+
+.section__title h1 {
+  font-family: var(--font-primary-2);
+  font-size: var(--size-title-section);
+  font-weight: 900;
+  color: var(--clr-primary-2);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.button__contact {
+  font-family: var(--font-primary-1);
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  border-radius: 50px;
+  background: transparent;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.button__contact:hover {
+  background-color: var(--clr-bg-2);
+}
+.button__contact:active {
+  background-color: var(--clr-bg);
+}
+
+.icon__container {
+  display: flex;
+  align-items: center;
+  margin-right: 1.8rem;
+}
+
+.icon__contact {
+  width: 1.25rem;
+  color: var(--clr-primary-2);
+}
+
+.mail__contact h4 {
+  font-size: var(--size-text-btn);
+  font-weight: 500;
+  color: var(--clr-primary-2);
+  transition: var(--transition);
 }
 
 @media (min-width: 1536px) {
@@ -266,59 +352,4 @@ svg {
   .mail__contact {
     padding-right: 1.75rem;
   }
-}
-
-.main {
-  overflow-x: hidden;
-}
-
-.section {
-  padding-bottom: 10vh;
-}
-
-.section__title {
-  padding-top: 5rem;
-  padding-bottom: 7rem;
-}
-
-.section__title h1 {
-  font-size: var(--size-title-section);
-  font-weight: bold;
-  color: var(--clr-primary-2);
-  line-height: 1;
-}
-
-.button__contact {
-  font-family: var(--font-primary-1);
-  display: inline-flex;
-  align-items: center;
-  width: auto;
-  border-radius: 50px;
-  background: transparent;
-  transition: all 200ms;
-  cursor: pointer;
-}
-.button__contact:hover {
-  background-color: var(--clr-bg-2);
-}
-.button__contact:active {
-  background-color: var(--clr-bg);
-}
-
-.icon__container {
-  display: flex;
-  align-items: center;
-  margin-right: 1.8rem;
-}
-
-.icon__contact {
-  width: 1.25rem;
-  color: var(--clr-primary-2);
-}
-
-.mail__contact h4 {
-  font-size: var(--size-text-btn);
-  font-weight: 500;
-  color: var(--clr-primary-2);
-  transition: var(--transition);
 }

@@ -14,6 +14,5 @@ function App() {
 export default App;
 
 //TODO
-// le hover (couleur uv) sur image
 // animation GSAP
 // corriger les fautes
