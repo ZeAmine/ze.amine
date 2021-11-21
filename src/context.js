@@ -5,14 +5,15 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
   const [cursor, setCursor] = useState({ active: false });
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpenModal = (open) => {
-    setIsOpen(open);
-  };
+  const [selected, setSelected] = useState(0);
 
   const toggleCursor = useCallback(() => {
     setCursor(({ active }) => ({ active: !active }));
   });
+
+  const handleOpenModal = (open) => {
+    setIsOpen(open);
+  };
 
   return (
     <AppContext.Provider
@@ -23,6 +24,8 @@ export const AppProvider = ({ children }) => {
         isOpen,
         setIsOpen,
         handleOpenModal,
+        selected,
+        setSelected,
       }}
     >
       {children}

@@ -53,7 +53,6 @@ export const projects = {
     {
       id: 5,
       num: "BONUS 01",
-      url: "",
       title: "Affiche 'Eclipse'.",
       text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
       language: "PHOTOSHOP · ILLUSTRATOR",
@@ -62,7 +61,6 @@ export const projects = {
     {
       id: 6,
       num: "BONUS 02",
-      url: "",
       title: "Affiche 'Eclipse'.",
       text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
       language: "PHOTOSHOP · ILLUSTRATOR",

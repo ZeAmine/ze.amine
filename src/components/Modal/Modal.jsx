@@ -1,6 +1,7 @@
 import React from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import "./Modal.css";
+import { useGlobalContext } from "../../context";
 
 const Modal = ({ handleClose, isOpen }) => {
   // const modalVariant = {
@@ -15,7 +16,8 @@ const Modal = ({ handleClose, isOpen }) => {
   //   exit: { width: "40%", height: "40%" },
   // };
 
-
+  const { toggleCursor } = useGlobalContext();
+  const { selected } = useGlobalContext();
 
   return (
     // <AnimatePresence>
@@ -31,12 +33,22 @@ const Modal = ({ handleClose, isOpen }) => {
           <div
             //variants={containerVariant}
             className="modal_img_container"
+            onMouseEnter={toggleCursor}
+            onMouseLeave={toggleCursor}
           >
-            <img
-              src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
-              alt="affiche Eclipse"
-              className="modal__img"
-            />
+            {selected === 5 ? (
+              <img
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
+                alt="affiche Eclipse"
+                className="modal__img"
+              />
+            ) : (
+              <img
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img6.png`}
+                alt="affiche Eclipse"
+                className="modal__img"
+              />
+            )}
           </div>
           <div className="modal__close" onClick={handleClose}>
             <h3>close</h3>
