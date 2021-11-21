@@ -1,8 +1,11 @@
 import React from "react";
 import ListProject from "../ListProject/ListProject";
 import "./Projects.css";
+import { useGlobalContext } from "../../context";
 
 const Projects = ({ title, items }) => {
+  const { handleOpenModal } = useGlobalContext();
+
   return (
     <section className="section projects" id="projects">
       <div className="projects__wrap container">
@@ -10,7 +13,11 @@ const Projects = ({ title, items }) => {
           <h1>{title}</h1>
         </div>
         {items.map((project, index) => (
-          <ListProject key={index} {...project} />
+          <ListProject
+            key={index}
+            {...project}
+            handleClick={() => handleOpenModal(true)}
+          />
         ))}
       </div>
     </section>

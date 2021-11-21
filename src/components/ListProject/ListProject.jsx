@@ -1,9 +1,18 @@
 import React from "react";
-import "./ListProject.css";
 import { RiLinkM, VscGithub } from "react-icons/all";
 import { useGlobalContext } from "../../context";
+import "./ListProject.css";
 
-const ListProject = ({ id, num, url, title, text, language, direction }) => {
+const ListProject = ({
+  id,
+  num,
+  url,
+  title,
+  text,
+  language,
+  direction,
+  handleClick,
+}) => {
   const { toggleCursor } = useGlobalContext();
 
   return (
@@ -41,13 +50,18 @@ const ListProject = ({ id, num, url, title, text, language, direction }) => {
             onMouseEnter={toggleCursor}
             onMouseLeave={toggleCursor}
           >
-            <div className="project_img_container">
-              <a href={url} rel="noreferrer" target="_blank">
-                <img
-                  src={process.env.PUBLIC_URL + `/assets/imgs/img${id}.png`}
-                  alt={title}
-                />
-              </a>
+            <div
+              className="project_img_container"
+              onClick={id === 5 || id === 6 ? handleClick : null}
+            >
+              {/*<a href={url} rel="noreferrer" target="_blank">*/}
+              <img
+                src={
+                  process.env.PUBLIC_URL + `/assets/imgs/projects/img${id}.png`
+                }
+                alt={title}
+              />
+              {/*</a>*/}
             </div>
           </div>
           <div className="project__info">

@@ -1,12 +1,17 @@
 import Home from "./components/Home/Home";
-import "./App.css";
 import Cursor from "./customCursor/cursor";
+import Modal from "./components/Modal/Modal";
+import { useGlobalContext } from "./context";
+import "./App.css";
 
 function App() {
+  const { handleOpenModal, isOpen } = useGlobalContext();
+
   return (
     <>
-      <Cursor />
       <Home />
+      <Cursor />
+      <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)} />
     </>
   );
 }

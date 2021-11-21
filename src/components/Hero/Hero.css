@@ -82,17 +82,16 @@
 /*------Forme*/
 .hero_img_bg {
   position: absolute;
-  top: 87px;
+  top: 130px;
   left: -55px;
-  width: 600px;
-  height: 600px;
+  width: 500px;
   z-index: -9999;
 }
 
 .hero_img_bg img {
   transform: rotate(45deg);
-  animation: float 6s ease-in-out infinite;
   filter: blur(3px);
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {

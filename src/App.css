@@ -88,6 +88,13 @@ body {
   /*cursor: none !important;*/
 }
 
+::selection {
+  background: #fc480e;
+}
+::-moz-selection {
+  background: #fc480e;
+}
+
 a,
 a:hover,
 a:visited {
