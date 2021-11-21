@@ -13,8 +13,8 @@ const ListProject = ({
   direction,
   handleClick,
 }) => {
-  const { toggleCursor } = useGlobalContext();
-  const { setSelected } = useGlobalContext();
+  const { toggleCursor, setSelected, setLineCross } =
+    useGlobalContext();
 
   return (
     <article className={direction ? "project_item_reverse" : "project__item"}>
@@ -47,7 +47,7 @@ const ListProject = ({
             </li>
           </ul>
           <div
-            className="project__img"
+            className="project_background_img"
             onMouseEnter={toggleCursor}
             onMouseLeave={toggleCursor}
             onClick={() => setSelected(id)}
@@ -56,7 +56,12 @@ const ListProject = ({
               className="project_img_container"
               onClick={id === 5 || id === 6 ? handleClick : null}
             >
-              <a href={url} rel="noreferrer" target="_blank">
+              <a
+                href={url}
+                rel="noreferrer"
+                target="_blank"
+                onClick={() => setLineCross(true)}
+              >
                 <img
                   src={
                     process.env.PUBLIC_URL +

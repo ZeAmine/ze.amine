@@ -163,7 +163,7 @@
   height: 1.25rem;
 }
 
-.header__line::before {
+.header_line_menu::before {
   content: "";
   position: absolute;
   top: 0;
@@ -175,7 +175,7 @@
   background-color: var(--clr-primary-2);
 }
 
-.header__line {
+.header_line_menu {
   position: relative;
   width: 12px;
   height: 2px;
@@ -184,7 +184,7 @@
   background-color: var(--clr-primary-2);
 }
 
-.header__line::after {
+.header_line_menu::after {
   content: "";
   position: absolute;
   top: 0;
@@ -196,17 +196,77 @@
   background-color: var(--clr-primary-2);
 }
 
-.header__line.active {
+.header_line_menu.active {
   transform: rotate(0);
   width: 7px;
 }
-.header__line.active::after {
+.header_line_menue.active::after {
   left: -5px;
   width: 7px;
 }
-.header__line.active::before {
+.header_line_menu.active::before {
   left: 5px;
   width: 7px;
+}
+
+/*-------Close*/
+.header__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 21px;
+  border-radius: 50px;
+  border: 2px solid var(--clr-primary-3);
+  background-color: transparent;
+  transition: background 200ms;
+  cursor: pointer;
+}
+
+.header__close:hover {
+  background-color: var(--clr-bg-2);
+  border: 2px solid var(--clr-bg-2);
+}
+.header__close:active {
+  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-bg-2);
+}
+
+.header_close_container {
+  position: relative;
+  display: block;
+  width: 2rem;
+  height: 1.25rem;
+}
+
+.header_line_close {
+  position: absolute;
+  top: 3.5px;
+  width: 2px;
+  height: 12px;
+  transform: translateZ(0);
+  background-color: var(--clr-primary-2);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 600ms;
+}
+.header_line_close:first-child {
+  left: 10px;
+}
+.header_line_close:nth-child(2) {
+  right: 15px;
+}
+.header_line_close:nth-child(3) {
+  right: 10px;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 600ms;
+}
+
+.header__close.is-active .header_line_close:first-child {
+  transform: translateX(5px) rotate(45deg);
+}
+.header__close.is-active .header_line_close:nth-child(2) {
+  transform: translateX(0px) rotate(-45deg);
+}
+.header__close.is-active .header_line_close:nth-child(3) {
+  opacity: 0;
 }
 
 /*----------BOTTOM*/

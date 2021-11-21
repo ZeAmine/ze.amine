@@ -2,14 +2,23 @@ import React, { useEffect, useState, useRef } from "react";
 import { links } from "../../data";
 import { RiMoonLine, RiSunLine } from "react-icons/all";
 import "./Header.css";
+import { useGlobalContext } from "../../context";
 
 const Header = () => {
   const [theme, setTheme] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
   const [translate, setTranslate] = useState(false);
   const [lineMenu, setLineMenu] = useState(false);
   const [active, setActive] = useState(0);
   const [hoverLogo, setHoverLogo] = useState(false);
+
+  const {
+    isOpen,
+    handleOpenModal,
+    showMenu,
+    setShowMenu,
+    lineCross,
+    setLineCross,
+  } = useGlobalContext();
 
   useEffect(() => {
     if (!theme) {
@@ -51,6 +60,8 @@ const Header = () => {
     setTheme(!theme);
   };
 
+  console.log(lineCross);
+
   return (
     <header className="header">
       <nav className="header__nav">
@@ -84,29 +95,51 @@ const Header = () => {
               </svg>
             </a>
             <div className="header__buttons">
-              <button className="header__mode" onClick={handleAnimMode}>
-                <div className="header_mode_container">
+              {isOpen ? (
+                <button
+                  className={
+                    lineCross ? "header__close is-active" : "header__close"
+                  }
+                  onClick={() => handleOpenModal(false)}
+                >
                   <div
-                    className={
-                      translate
-                        ? "header_icon_container active"
-                        : "header_icon_container"
-                    }
+                    className="header_close_container"
+                    onClick={() => setLineCross(false)}
                   >
-                    <RiSunLine className="header_mode_icon" />
-                    <RiMoonLine className="header_mode_icon" />
+                    <span className="header_line_close" />
+                    <span className="header_line_close" />
+                    <span className="header_line_close" />
                   </div>
-                </div>
-              </button>
-              <button className="header__menu" onClick={handleAnimMenu}>
-                <div className="header_line_container">
-                  <div
-                    className={
-                      lineMenu ? "header__line active" : "header__line"
-                    }
-                  />
-                </div>
-              </button>
+                </button>
+              ) : (
+                <>
+                  <button className="header__mode" onClick={handleAnimMode}>
+                    <div className="header_mode_container">
+                      <div
+                        className={
+                          translate
+                            ? "header_icon_container active"
+                            : "header_icon_container"
+                        }
+                      >
+                        <RiSunLine className="header_mode_icon" />
+                        <RiMoonLine className="header_mode_icon" />
+                      </div>
+                    </div>
+                  </button>
+                  <button className="header__menu" onClick={handleAnimMenu}>
+                    <div className="header_line_container">
+                      <div
+                        className={
+                          lineMenu
+                            ? "header_line_menu active"
+                            : "header_line_menu"
+                        }
+                      />
+                    </div>
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>

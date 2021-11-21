@@ -3,7 +3,7 @@ import React from "react";
 import "./Modal.css";
 import { useGlobalContext } from "../../context";
 
-const Modal = ({ handleClose, isOpen }) => {
+const Modal = ({ isOpen }) => {
   // const modalVariant = {
   //   initial: { opacity: 0 },
   //   isOpen: { opacity: 1 },
@@ -16,8 +16,7 @@ const Modal = ({ handleClose, isOpen }) => {
   //   exit: { width: "40%", height: "40%" },
   // };
 
-  const { toggleCursor } = useGlobalContext();
-  const { selected } = useGlobalContext();
+  const { toggleCursor, selected } = useGlobalContext();
 
   return (
     // <AnimatePresence>
@@ -49,9 +48,6 @@ const Modal = ({ handleClose, isOpen }) => {
                 className="modal__img"
               />
             )}
-          </div>
-          <div className="modal__close" onClick={handleClose}>
-            <h3>close</h3>
           </div>
         </div>
       )}

@@ -6,6 +6,8 @@ export const AppProvider = ({ children }) => {
   const [cursor, setCursor] = useState({ active: false });
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
+  const [lineCross, setLineCross] = useState(false);
 
   const toggleCursor = useCallback(() => {
     setCursor(({ active }) => ({ active: !active }));
@@ -26,6 +28,10 @@ export const AppProvider = ({ children }) => {
         handleOpenModal,
         selected,
         setSelected,
+        showMenu,
+        setShowMenu,
+        lineCross,
+        setLineCross,
       }}
     >
       {children}

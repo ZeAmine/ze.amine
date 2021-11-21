@@ -5,13 +5,13 @@ import { useGlobalContext } from "./context";
 import "./App.css";
 
 function App() {
-  const { handleOpenModal, isOpen } = useGlobalContext();
+  const { isOpen } = useGlobalContext();
 
   return (
     <>
       <Home />
       <Cursor />
-      <Modal isOpen={isOpen} handleClose={() => handleOpenModal(false)} />
+      <Modal isOpen={isOpen} />
     </>
   );
 }
