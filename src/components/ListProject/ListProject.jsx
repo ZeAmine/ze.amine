@@ -13,8 +13,7 @@ const ListProject = ({
   direction,
   handleClick,
 }) => {
-  const { toggleCursor, setSelected, setLineCross } =
-    useGlobalContext();
+  const { toggleCursor, setSelected, setLineCross } = useGlobalContext();
 
   return (
     <article className={direction ? "project_item_reverse" : "project__item"}>
@@ -54,7 +53,7 @@ const ListProject = ({
           >
             <div
               className="project_img_container"
-              onClick={id === 5 || id === 6 ? handleClick : null}
+              onClick={id === 4 || id === 5 ? handleClick : null}
             >
               <a
                 href={url}

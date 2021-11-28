@@ -60,8 +60,6 @@ const Header = () => {
     setTheme(!theme);
   };
 
-  console.log(lineCross);
-
   return (
     <header className="header">
       <nav className="header__nav">

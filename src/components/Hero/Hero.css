@@ -42,6 +42,12 @@
   letter-spacing: 1px;
 }
 
+.hero__title:hover h1 {
+  -webkit-text-stroke: 2px var(--clr-primary-2);
+  color: transparent;
+  transition: all 100ms ease-in-out;
+}
+
 .hero__content {
   display: flex;
   place-content: flex-end;

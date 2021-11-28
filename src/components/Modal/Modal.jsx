@@ -35,15 +35,15 @@ const Modal = ({ isOpen }) => {
             onMouseEnter={toggleCursor}
             onMouseLeave={toggleCursor}
           >
-            {selected === 5 ? (
+            {selected === 4 ? (
               <img
-                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img4.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
               />
             ) : (
               <img
-                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img6.png`}
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
               />
