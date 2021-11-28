@@ -67,6 +67,8 @@
   height: auto;
   margin-bottom: 2.5rem;
   margin-top: 5rem;
+  overflow: hidden;
+  /*background: red;*/
 }
 
 .hero__text {
