@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { links } from "../../data";
 import { RiMoonLine, RiSunLine } from "react-icons/all";
-import "./Header.css";
 import { useGlobalContext } from "../../context";
+import "./Header.css";
 
 const Header = () => {
   const [theme, setTheme] = useState(false);

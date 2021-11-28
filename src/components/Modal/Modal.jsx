@@ -1,36 +1,26 @@
-import React from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-import "./Modal.css";
+import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context";
+import { gsap } from "gsap";
+import { Power4 } from "gsap/gsap-core";
+import "./Modal.css";
 
 const Modal = ({ isOpen }) => {
-  // const modalVariant = {
-  //   initial: { opacity: 0 },
-  //   isOpen: { opacity: 1 },
-  //   exit: { opacity: 0 },
-  // };
-  //
-  // const containerVariant = {
-  //   initial: { width: "40%", height: "40%", transition: { type: "spring" } },
-  //   isOpen: { width: "50%", height: "50%" },
-  //   exit: { width: "40%", height: "40%" },
-  // };
+  const { toggleCursor, selected, handleOpenModal } = useGlobalContext();
+  const modalRef = useRef(null);
 
-  const { toggleCursor, selected } = useGlobalContext();
+  useEffect(() => {
+    gsap.from(modalRef.current, {
+      y: 180,
+      opacity: 0.5,
+      ease: Power4.easeOut,
+    });
+  }, [isOpen]);
 
   return (
-    // <AnimatePresence>
     <>
       {isOpen && (
-        <div
-          // initial={"initial"}
-          // animate={"isOpen"}
-          // exit={"exit"}
-          // variants={modalVariant}
-          className="overlay"
-        >
+        <div className="overlay" onClick={() => handleOpenModal(false)}>
           <div
-            //variants={containerVariant}
             className="modal_img_container"
             onMouseEnter={toggleCursor}
             onMouseLeave={toggleCursor}
@@ -40,19 +30,20 @@ const Modal = ({ isOpen }) => {
                 src={process.env.PUBLIC_URL + `/assets/imgs/projects/img4.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
+                ref={modalRef}
               />
             ) : (
               <img
                 src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
+                ref={modalRef}
               />
             )}
           </div>
         </div>
       )}
     </>
-    // </AnimatePresence>
   );
 };
 
