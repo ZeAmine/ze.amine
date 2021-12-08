@@ -25,14 +25,6 @@ export const projects = {
       language: "REACT.JS · TMDB API · AXIOS",
       direction: "reverse",
     },
-    // {
-    //   id: 2,
-    //   num: "02",
-    //   url: "",
-    //   title: "Prime Video Clone.",
-    //   text: "Je m'entraine souvent à recrée des sites souvent bien réalisé.",
-    //   language: "REACT.JS · TMDB API · AXIOS",
-    // },
     {
       id: 2,
       num: "03",

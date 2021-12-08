@@ -18,7 +18,8 @@
   display: inline-block;
   width: 100%;
   height: 6rem;
-  background-color: var(--clr-hf);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: var(--clr-hf) 0.7;
 }
 
 .header_top_wrap {
@@ -198,15 +199,6 @@
 
 .header_line_menu.active {
   transform: rotate(0);
-  width: 7px;
-}
-.header_line_menue.active::after {
-  left: -5px;
-  width: 7px;
-}
-.header_line_menu.active::before {
-  left: 5px;
-  width: 7px;
 }
 
 /*-------Close*/

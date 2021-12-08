@@ -1,5 +1,5 @@
 .footer {
-  height: 25vh;
+  height: 30vh;
   background-color: var(--clr-hf);
 }
 
@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0 3.75vw;
-  padding: 2vh 0;
+  padding: 3em 0;
 }
 
 /*--------Réseaux*/
@@ -140,7 +140,7 @@
 }
 .footer_logo_container {
   display: inline-block;
-  float: right;
+  float: left;
   width: 7rem;
   height: 100%;
   opacity: 0.2;

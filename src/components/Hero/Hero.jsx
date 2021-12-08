@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { RiMailLine } from "react-icons/all";
 import { gsap } from "gsap";
-import { Power4 } from "gsap/gsap-core";
+import { Power4, Sine } from "gsap/gsap-core";
 import "./Hero.css";
 
 const Hero = () => {
@@ -9,11 +9,13 @@ const Hero = () => {
   const textRef2 = useRef(null);
   const textRef3 = useRef(null);
 
+  const imageBgRef = useRef(null);
+
   useEffect(() => {
     gsap.from([textRef.current, textRef2.current, textRef3.current], {
       y: 300,
-      duration: 1.3,
-      delay: 1.5,
+      duration: 1.5,
+      delay: 1.2,
     });
     gsap.to([textRef.current, textRef2.current, textRef3.current], {
       y: 0,
@@ -21,8 +23,15 @@ const Hero = () => {
         each: 0.1,
       },
       ease: Power4.easeOut,
-      duration: 1.3,
-      delay: 1.5,
+      duration: 1.5,
+      delay: 1.2,
+    });
+    gsap.to(imageBgRef.current, {
+      y: -20,
+      repeat: -1,
+      yoyo: true,
+      ease: Sine.easeInOut,
+      duration: 1.5,
     });
   }, []);
 
@@ -35,7 +44,9 @@ const Hero = () => {
           <h3>disponible pour un éventuel stage (Paris)</h3>
         </div>
         <div className="hero__title">
-          <h1>Développeur front-end, de la conception à la réalisation.</h1>
+          <h1>Développeur front-end,</h1>
+          <h1>de la conception à la</h1>
+          <h1>réalisation.</h1>
         </div>
         <div className="hero__content">
           <div className="hero_content_container">
@@ -66,7 +77,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero_img_bg">
+        <div className="hero_img_bg" ref={imageBgRef}>
           <img
             src={process.env.PUBLIC_URL + "/assets/imgs/hero/spiral.png"}
             alt="forme abstraite"

@@ -29,6 +29,7 @@
 /*-------Title*/
 .hero__title {
   display: inline-block;
+  height: auto;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -92,33 +93,33 @@
   position: absolute;
   top: 130px;
   left: -55px;
-  width: 500px;
-  z-index: -9999;
+  width: 26vw;
+  z-index: -50;
 }
 
 .hero_img_bg img {
-  transform: rotate(45deg);
+  /*transform: rotate(45deg);*/
   filter: blur(3px);
-  animation: float 6s ease-in-out infinite;
+  /*animation: float 6s ease-in-out infinite;*/
 }
 
-@keyframes float {
-  from {
-    transform: translateY(0px) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-25px) rotate(2deg);
-  }
-  50% {
-    transform: translateY(-50px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-25px) rotate(-2deg);
-  }
-  to {
-    transform: translateY(0px) rotate(0deg);
-  }
-}
+/*@keyframes float {*/
+/*  from {*/
+/*    transform: translateY(0px) rotate(0deg);*/
+/*  }*/
+/*  25% {*/
+/*    transform: translateY(-25px) rotate(2deg);*/
+/*  }*/
+/*  50% {*/
+/*    transform: translateY(-50px) rotate(0deg);*/
+/*  }*/
+/*  75% {*/
+/*    transform: translateY(-25px) rotate(-2deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: translateY(0px) rotate(0deg);*/
+/*  }*/
+/*}*/
 
 @media (max-width: 1280px) {
   .hero_img_bg img {

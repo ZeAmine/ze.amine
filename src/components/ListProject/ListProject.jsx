@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiLinkM, VscGithub } from "react-icons/all";
 import { useGlobalContext } from "../../context";
 import "./ListProject.css";
@@ -14,6 +14,7 @@ const ListProject = ({
   handleClick,
 }) => {
   const { toggleCursor, setSelected, setLineCross } = useGlobalContext();
+  const [hoverIcon, setHoverIcon] = useState(false);
 
   return (
     <article className={direction ? "project_item_reverse" : "project__item"}>
@@ -30,18 +31,36 @@ const ListProject = ({
           }
         >
           <ul className="project__links">
-            <li className="project_item_link">
+            <li className="project_item_link github">
               <a
                 href="https://github.com/ZeAmine"
                 rel="noreferrer"
                 target="_blank"
+                onMouseOver={() => setHoverIcon(true)}
+                onMouseLeave={() => setHoverIcon(false)}
+                style={{
+                  width: hoverIcon && "11em",
+                  padding: !hoverIcon ? "0.37em" : "1em",
+                }}
               >
-                <VscGithub className="project__icon" />
+                <VscGithub className="project_link_icon github" />
+                {hoverIcon && (
+                  <span className="project_link_text">Visiter le github</span>
+                )}
               </a>
             </li>
-            <li className="project_item_link">
-              <a href={url}>
-                <RiLinkM className="project__icon" />
+            <li className="project_item_link site">
+              <a
+                href={url}
+                style={{
+                  width: hoverIcon && "2em",
+                  padding: hoverIcon ? "0.37em" : "1em",
+                }}
+              >
+                <RiLinkM className="project_link_icon site" style={{}} />
+                {!hoverIcon && (
+                  <span className="project_link_text">Visiter le site</span>
+                )}
               </a>
             </li>
           </ul>
