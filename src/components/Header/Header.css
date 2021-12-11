@@ -17,9 +17,9 @@
 .header__top {
   display: inline-block;
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   backdrop-filter: saturate(180%) blur(20px);
-  background-color: var(--clr-hf) 0.7;
+  background-color: var(--clr-bg) 0.7;
 }
 
 .header_top_wrap {
@@ -267,7 +267,8 @@
   place-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--clr-hf);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: var(--clr-bg) 0.7;
   transition: all 300ms;
   overflow: hidden;
   z-index: 9999;
@@ -284,8 +285,8 @@
 .header_nav_cursor {
   position: absolute;
   border-radius: 50px;
-  background-color: var(--clr-bg-2);
-  transition: all 200ms;
+  background-color: var(--clr-primary-1);
+  transition: all 200ms ease-out;
   z-index: -10;
 }
 

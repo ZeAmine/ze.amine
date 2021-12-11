@@ -1,65 +1,92 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { RiMailLine } from "react-icons/all";
 import { gsap } from "gsap";
 import { Power4, Sine } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "./Hero.css";
 
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 const Hero = () => {
-  const textRef = useRef(null);
-  const textRef2 = useRef(null);
-  const textRef3 = useRef(null);
-
-  const imageBgRef = useRef(null);
-
-  useEffect(() => {
-    gsap.from([textRef.current, textRef2.current, textRef3.current], {
-      y: 300,
-      duration: 1.5,
-      delay: 1.2,
-    });
-    gsap.to([textRef.current, textRef2.current, textRef3.current], {
-      y: 0,
-      stagger: {
-        each: 0.1,
+  const slideText = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        y: 300,
+        ease: Power4.easeOut,
+        delay: delay,
+        duration: duration,
       },
-      ease: Power4.easeOut,
-      duration: 1.5,
-      delay: 1.2,
-    });
-    gsap.to(imageBgRef.current, {
+      {
+        y: 0,
+        stagger: {
+          each: 0.1,
+        },
+        ease: Power4.easeOut,
+        delay: delay,
+        duration: duration,
+      }
+    );
+  };
+
+  const slideImg = (elem, duration) => {
+    gsap.to(elem, {
       y: -20,
       repeat: -1,
       yoyo: true,
       ease: Sine.easeInOut,
-      duration: 1.5,
+      duration: duration,
     });
+  };
+
+  // Logo Animation
+  const triggerLogo = (elemTrigger, elemTarget, duration) => {
+    gsap.to(elemTarget, {
+      ScrollTrigger: {
+        trigger: elemTrigger,
+        // trigger element - viewport
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+      width: 200,
+      duration: duration,
+    });
+  };
+
+  useEffect(() => {
+    slideText(".hero__text", 1.2, 1.5);
+    slideText([".hero_name_text", ".hero__line"], 1.5, 1.5);
+    slideImg(".hero_img_bg", 1.5);
+    triggerLogo(".projects", ".header__logo", 1);
   }, []);
 
   return (
     <section className="hero" id="accueil">
       <div className="hero__wrap container">
         <div className="hero__name">
-          <h3>Je m'appelle Amine Zegmou</h3>
+          <h3 className="hero_name_text">Amine Zegmou</h3>
           <div className="hero__line" />
-          <h3>disponible pour un éventuel stage (Paris)</h3>
+          <h3 className="hero_name_text">
+            Disponible pour un éventuel stage (Paris)
+          </h3>
         </div>
         <div className="hero__title">
-          <h1>Développeur front-end,</h1>
-          <h1>de la conception à la</h1>
-          <h1>réalisation.</h1>
+          <h1>Développeur front-end, de la conception à la réalisation.</h1>
         </div>
         <div className="hero__content">
           <div className="hero_content_container">
             <div className="hero_text_container">
-              <p className="hero__text" ref={textRef}>
+              <p className="hero__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Maecenas
               </p>
-              <p className="hero__text" ref={textRef2}>
+              <p className="hero__text">
                 rhoncus viverra ante, id tincidunt turpis placerat vitae
                 suspendisse
               </p>
-              <p className="hero__text" ref={textRef3}>
+              <p className="hero__text">
                 sollicitudin sodales nulla, in euismod ex mattis sit amet.
               </p>
             </div>
@@ -77,7 +104,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero_img_bg" ref={imageBgRef}>
+        <div className="hero_img_bg">
           <img
             src={process.env.PUBLIC_URL + "/assets/imgs/hero/spiral.png"}
             alt="forme abstraite"

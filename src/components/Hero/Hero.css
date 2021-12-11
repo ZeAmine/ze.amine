@@ -9,8 +9,10 @@
 
 /*-------Name*/
 .hero__name {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  height: auto;
+  overflow: hidden;
 }
 
 .hero__line {
