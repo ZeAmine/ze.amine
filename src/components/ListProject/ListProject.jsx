@@ -30,7 +30,10 @@ const ListProject = ({
               : "project_content_right"
           }
         >
-          <ul className="project__links">
+          <ul
+            className="project__links"
+            style={{ display: id === 4 || id === 5 ? "none" : null }}
+          >
             <li className="project_item_link github">
               <a
                 href="https://github.com/ZeAmine"

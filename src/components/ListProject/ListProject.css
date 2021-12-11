@@ -100,9 +100,9 @@
   width: inherit;
   height: inherit;
   border-radius: 8px;
-  overflow: hidden;
   outline: 1px solid var(--clr-bg);
   cursor: pointer;
+  overflow: hidden;
 }
 
 .project_img_container img {
@@ -110,10 +110,11 @@
   top: 140%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all 200ms;
+  transition: all 400ms var(--ease-images);
 }
+
 .project_img_container:hover img {
-  filter: grayscale(100%);
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 /*--------Info*/
@@ -172,7 +173,7 @@
 }
 
 .project__text {
-  width: 300px;
+  width: 20vw;
   padding-left: 1rem;
 }
 

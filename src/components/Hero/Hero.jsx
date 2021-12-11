@@ -40,26 +40,28 @@ const Hero = () => {
     });
   };
 
-  // Logo Animation
-  const triggerLogo = (elemTrigger, elemTarget, duration) => {
-    gsap.to(elemTarget, {
-      ScrollTrigger: {
-        trigger: elemTrigger,
-        // trigger element - viewport
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
-      width: 200,
-      duration: duration,
-    });
-  };
+  // // Logo Animation
+  // const triggerLogo = (elemTrigger, elemTarget, duration) => {
+  //   gsap.from(elemTarget, {
+  //     opacity: 0,
+  //     y: 500,
+  //     duration: duration,
+  //     ease: Power4.easeInOut,
+  //     ScrollTrigger: {
+  //       trigger: elemTrigger,
+  //       start: "top top",
+  //       end: () => `+=${elemTrigger.offset}`,
+  //       scrub: 0.5,
+  //       pin: true,
+  //     },
+  //   });
+  // };
 
   useEffect(() => {
     slideText(".hero__text", 1.2, 1.5);
     slideText([".hero_name_text", ".hero__line"], 1.5, 1.5);
-    slideImg(".hero_img_bg", 1.5);
-    triggerLogo(".projects", ".header__logo", 1);
+    slideImg(".hero_img_bg", 2);
+    // triggerLogo(".hero__wrap", ".hero__title", 1);
   }, []);
 
   return (
@@ -69,7 +71,7 @@ const Hero = () => {
           <h3 className="hero_name_text">Amine Zegmou</h3>
           <div className="hero__line" />
           <h3 className="hero_name_text">
-            Disponible pour un éventuel stage (Paris)
+            Disponible pour un éventuel stage sur Paris
           </h3>
         </div>
         <div className="hero__title">
@@ -79,15 +81,16 @@ const Hero = () => {
           <div className="hero_content_container">
             <div className="hero_text_container">
               <p className="hero__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas
+                Je suis développeur junior et j’étudie actuellement chez Hetic,
               </p>
               <p className="hero__text">
-                rhoncus viverra ante, id tincidunt turpis placerat vitae
-                suspendisse
+                une école basée dans le digital et le numérique. Je suis
               </p>
               <p className="hero__text">
-                sollicitudin sodales nulla, in euismod ex mattis sit amet.
+                passionné par le développement web depuis peu et Hetic m’aide
+              </p>
+              <p className="hero__text">
+                à réaliser de nombreux projets sur lesquels j'aime travailler.
               </p>
             </div>
             <div className="hero__contact">
