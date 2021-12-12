@@ -109,8 +109,8 @@
   place-items: center;
   width: 2rem;
   height: 1.25rem;
-  z-index: 10;
   overflow: hidden;
+  z-index: 10;
 }
 
 .header_icon_container {
@@ -121,7 +121,7 @@
   width: 4rem;
   height: 100%;
   transform: translateX(22px);
-  transition: var(--transition) 200ms;
+  transition: all 400ms var(--ease-images) 200ms;
 }
 .header_icon_container.active {
   transform: translateX(-22px);

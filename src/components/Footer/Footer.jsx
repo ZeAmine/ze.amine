@@ -1,10 +1,8 @@
 import React from "react";
 import {
   RiArrowUpSLine,
-  RiFacebookCircleFill,
   RiGithubFill,
   RiLinkedinBoxFill,
-  RiTwitterFill,
 } from "react-icons/all";
 import "./Footer.css";
 
@@ -19,23 +17,21 @@ const Footer = () => {
             </div>
             <ul className="footer_social_list">
               <li className="footer_social_item">
-                <a href="/">
-                  <RiFacebookCircleFill className="footer_social_icon" />
-                </a>
-              </li>
-              <li className="footer_social_item">
-                <a href="/">
+                <a
+                  href="https://www.linkedin.com/in/zeamine/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <RiLinkedinBoxFill className="footer_social_icon" />
                 </a>
               </li>
               <li className="footer_social_item">
-                <a href="/">
+                <a
+                  href="https://github.com/ZeAmine"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <RiGithubFill className="footer_social_icon" />
-                </a>
-              </li>
-              <li className="footer_social_item">
-                <a href="/">
-                  <RiTwitterFill className="footer_social_icon" />
                 </a>
               </li>
             </ul>

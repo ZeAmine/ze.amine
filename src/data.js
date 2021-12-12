@@ -19,7 +19,7 @@ export const projects = {
     {
       id: 1,
       num: "01",
-      url: "https://react-disneyplus-app.netlify.app",
+      url: "https://disneyplus-app.vercel.app/",
       title: "Clone Disney Plus.",
       text: "Clone de la celebre plateforme de streaming: Disney Plus.",
       language: "REACT.JS · TMDB API · AXIOS",
@@ -28,7 +28,7 @@ export const projects = {
     {
       id: 2,
       num: "03",
-      url: "https://react-airbnbapp.netlify.app/",
+      url: "https://aiirbnb.vercel.app/",
       title: "Clone Airbnb.",
       text: "Clone de la celebre plateforme de location de logement: Airbnb.",
       language: "REACT.JS · TAILWIND CSS",
@@ -36,7 +36,7 @@ export const projects = {
     {
       id: 3,
       num: "04",
-      url: "",
+      url: "https://awake-koala.vercel.app/",
       title: "Awake Koala.",
       text: "Création du site de streaming et du branding",
       language: "REACT.JS · TMDB API · AXIOS",

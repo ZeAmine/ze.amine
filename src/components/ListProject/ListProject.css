@@ -49,21 +49,19 @@
   place-items: center;
   width: 2em;
   height: 2em;
+  padding: 1em;
   border-radius: 50px;
   background-color: var(--clr-primary-3);
   transition: all 200ms ease-out;
 }
-.project_item_link.github a:hover {
-  width: 3.75rem;
-  border-radius: 50px;
-  background-color: var(--clr-primary-1);
-}
 
 .project_item_link.site a {
   width: 9.5em;
-  height: 2em;
-  border-radius: 50px;
-  transition: all 200ms ease-out;
+}
+
+.project_item_link.github:hover a,
+.project_item_link.site:hover a {
+  background-color: var(--clr-primary-1);
 }
 
 .project_link_icon {
@@ -215,8 +213,8 @@
     margin-left: 1rem;
   }
   .project_item_link a {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.5em;
+    height: 2.5em;
   }
   .project_link_icon {
     width: 1.5rem;

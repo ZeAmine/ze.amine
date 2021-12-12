@@ -43,7 +43,7 @@ const ListProject = ({
                 onMouseLeave={() => setHoverIcon(false)}
                 style={{
                   width: hoverIcon && "11em",
-                  padding: !hoverIcon ? "0.37em" : "1em",
+                  padding: !hoverIcon && "0.37em",
                 }}
               >
                 <VscGithub className="project_link_icon github" />
@@ -57,10 +57,10 @@ const ListProject = ({
                 href={url}
                 style={{
                   width: hoverIcon && "2em",
-                  padding: hoverIcon ? "0.37em" : "1em",
+                  padding: hoverIcon && "0.37em",
                 }}
               >
-                <RiLinkM className="project_link_icon site" style={{}} />
+                <RiLinkM className="project_link_icon site" />
                 {!hoverIcon && (
                   <span className="project_link_text">Visiter le site</span>
                 )}
