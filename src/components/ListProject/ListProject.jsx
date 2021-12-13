@@ -6,7 +6,9 @@ import "./ListProject.css";
 const ListProject = ({
   id,
   num,
+  img,
   url,
+  urlGit,
   title,
   text,
   language,
@@ -36,7 +38,7 @@ const ListProject = ({
           >
             <li className="project_item_link github">
               <a
-                href="https://github.com/ZeAmine"
+                href={urlGit}
                 rel="noreferrer"
                 target="_blank"
                 onMouseOver={() => setHoverIcon(true)}
@@ -84,10 +86,7 @@ const ListProject = ({
                 onClick={() => setLineCross(true)}
               >
                 <img
-                  src={
-                    process.env.PUBLIC_URL +
-                    `/assets/imgs/projects/img${id}.png`
-                  }
+                  src={process.env.PUBLIC_URL + `/assets/imgs/projects/${img}`}
                   alt={title}
                 />
               </a>

@@ -18,25 +18,31 @@ export const projects = {
   items: [
     {
       id: 1,
+      img: "img1.png",
       num: "01",
       url: "https://disneyplus-app.vercel.app/",
-      title: "Clone Disney Plus.",
-      text: "Clone de la celebre plateforme de streaming: Disney Plus.",
+      urlGit: "https://github.com/ZeAmine/react-disneyplus-app",
+      title: "Clone Disney+.",
+      text: "Clone de la célèbre plateforme de streaming: Disney+.",
       language: "REACT.JS · TMDB API · AXIOS",
       direction: "reverse",
     },
     {
       id: 2,
+      img: "img2.png",
       num: "03",
       url: "https://aiirbnb.vercel.app/",
+      urlGit: "https://github.com/ZeAmine/react-airbnb-app",
       title: "Clone Airbnb.",
-      text: "Clone de la celebre plateforme de location de logement: Airbnb.",
+      text: "Clone de la célèbre plateforme de location de logement: Airbnb.",
       language: "REACT.JS · TAILWIND CSS",
     },
     {
       id: 3,
+      img: "img3.jpeg",
       num: "04",
       url: "https://awake-koala.vercel.app/",
+      urlGit: "https://github.com/ZeAmine/awake-koala",
       title: "Awake Koala.",
       text: "Création du site de streaming et du branding",
       language: "REACT.JS · TMDB API · AXIOS",
@@ -44,6 +50,7 @@ export const projects = {
     },
     {
       id: 4,
+      img: "img3.png",
       num: "BONUS 01",
       title: "Affiche 'Eclipse'.",
       text: "Conception graphique de la 1er affiche basé sur un projet de Design Fiction",
@@ -51,6 +58,7 @@ export const projects = {
     },
     {
       id: 5,
+      img: "img3.png",
       num: "BONUS 02",
       title: "Affiche 'Eclipse'.",
       text: "Conception graphique de la 2e affiche basé sur un projet de Design Fiction",
@@ -58,5 +66,5 @@ export const projects = {
       direction: "reverse",
     },
   ],
-  urlPrefix: "/assets/imgs/img",
+  urlPrefix: "/assets/imgs/",
 };
