@@ -135,7 +135,8 @@ svg {
   --clr-primary-1: #fc480e;
   --clr-primary-2: #dacfc0;
   --clr-primary-3: #dacfc0b2;
-  --clr-hf: #131313;
+  --clr-hf: #101010;
+  --clr-hf-rgba: rgba(16, 16, 16, 0.8);
   --clr-bg: #181818;
   --clr-bg-2: #242424;
 
@@ -170,6 +171,7 @@ svg {
   --clr-primary-2: #000000;
   --clr-primary-3: #242424;
   --clr-hf: #b6c2cc;
+  --clr-hf-rgba: rgba(182, 194, 204, 0.8);
   --clr-bg: #c2c7cc;
   --clr-bg-2: #cfd4da;
 
