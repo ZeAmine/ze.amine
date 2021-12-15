@@ -39,7 +39,7 @@ export const projects = {
     },
     {
       id: 3,
-      img: "img3.jpeg",
+      img: "img3.png",
       num: "04",
       url: "https://awake-koala.vercel.app/",
       urlGit: "https://github.com/ZeAmine/awake-koala",
@@ -50,7 +50,7 @@ export const projects = {
     },
     {
       id: 4,
-      img: "img3.png",
+      img: "img4.png",
       num: "BONUS 01",
       title: "Affiche 'Eclipse'.",
       text: "Conception graphique de la 1er affiche basé sur un projet de Design Fiction",
@@ -58,7 +58,7 @@ export const projects = {
     },
     {
       id: 5,
-      img: "img3.png",
+      img: "img4.png",
       num: "BONUS 02",
       title: "Affiche 'Eclipse'.",
       text: "Conception graphique de la 2e affiche basé sur un projet de Design Fiction",

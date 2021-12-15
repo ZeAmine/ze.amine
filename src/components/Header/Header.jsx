@@ -5,11 +5,14 @@ import { useGlobalContext } from "../../context";
 import "./Header.css";
 
 const Header = () => {
-  const [theme, setTheme] = useState(false);
   const [translate, setTranslate] = useState(false);
   const [lineMenu, setLineMenu] = useState(false);
   const [active, setActive] = useState(0);
   const [hoverLogo, setHoverLogo] = useState(false);
+
+  const navCursor = useRef(null);
+  const navItems = useRef(null);
+  const linksContainer = useRef(null);
 
   const {
     isOpen,
@@ -18,15 +21,24 @@ const Header = () => {
     setShowMenu,
     lineCross,
     setLineCross,
+    theme,
+    setTheme,
   } = useGlobalContext();
 
   useEffect(() => {
-    if (!theme) {
-      document.documentElement.setAttribute("data-theme", "default");
+    if (showMenu) {
+      linksContainer.current.style.height = "3.75rem";
+      navItems.current.style.opacity = "1";
     } else {
-      document.documentElement.setAttribute("data-theme", "clear");
+      linksContainer.current.style.height = "0";
+      navItems.current.style.opacity = "0";
     }
-  }, [theme]);
+  }, [showMenu]);
+
+  const handleAnimMenu = () => {
+    setShowMenu(!showMenu);
+    setLineMenu(!lineMenu);
+  };
 
   const handleAnimMode = () => {
     setTranslate(!translate);
@@ -101,6 +113,32 @@ const Header = () => {
               );
             })}
           </ul>
+          <div className="header__bottom" ref={linksContainer}>
+            <ul className="header_list_bottom">
+              {links.map(({ url, text }, index) => {
+                return (
+                  <li
+                    key={index}
+                    onClick={() => setActive(index)}
+                    className="header__item"
+                  >
+                    <a href={url}>
+                      <span
+                        ref={navItems}
+                        className={
+                          index === active
+                            ? "header_item_text active"
+                            : "header_item_text"
+                        }
+                      >
+                        {text}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
           {/*Buttons*/}
           <div className="header__buttons">
@@ -134,6 +172,17 @@ const Header = () => {
                       <RiSunLine className="header_mode_icon" />
                       <RiMoonLine className="header_mode_icon" />
                     </div>
+                  </div>
+                </button>
+                <button className="header__menu" onClick={handleAnimMenu}>
+                  <div className="header_line_container">
+                    <div
+                      className={
+                        lineMenu
+                          ? "header_line_menu active"
+                          : "header_line_menu"
+                      }
+                    />
                   </div>
                 </button>
               </>

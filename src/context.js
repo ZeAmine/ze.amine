@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext, useCallback, useEffect } from "react";
 
 const AppContext = React.createContext();
 
@@ -8,6 +8,7 @@ export const AppProvider = ({ children }) => {
   const [selected, setSelected] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
   const [lineCross, setLineCross] = useState(false);
+  const [theme, setTheme] = useState(false);
 
   const toggleCursor = useCallback(() => {
     setCursor(({ active }) => ({ active: !active }));
@@ -16,6 +17,14 @@ export const AppProvider = ({ children }) => {
   const handleOpenModal = (open) => {
     setIsOpen(open);
   };
+
+  useEffect(() => {
+    if (!theme) {
+      document.documentElement.setAttribute("data-theme", "default");
+    } else {
+      document.documentElement.setAttribute("data-theme", "clear");
+    }
+  }, [theme]);
 
   return (
     <AppContext.Provider
@@ -32,6 +41,8 @@ export const AppProvider = ({ children }) => {
         setShowMenu,
         lineCross,
         setLineCross,
+        theme,
+        setTheme,
       }}
     >
       {children}

@@ -27,14 +27,14 @@ const Modal = ({ isOpen }) => {
           >
             {selected === 4 ? (
               <img
-                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img4.png`}
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
                 ref={modalRef}
               />
             ) : (
               <img
-                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img5.png`}
+                src={process.env.PUBLIC_URL + `/assets/imgs/projects/img6.png`}
                 alt="affiche Eclipse"
                 className="modal__img"
                 ref={modalRef}
