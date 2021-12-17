@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
+import "./Header.css";
 import { links } from "../../data";
 import { RiMoonLine, RiSunLine } from "react-icons/all";
 import { useGlobalContext } from "../../context";
-import "./Header.css";
+import { gsap } from "gsap";
+import { Power4 } from "gsap/gsap-core";
 
 const Header = () => {
   const [translate, setTranslate] = useState(false);
@@ -10,7 +12,6 @@ const Header = () => {
   const [active, setActive] = useState(0);
   const [hoverLogo, setHoverLogo] = useState(false);
 
-  const navCursor = useRef(null);
   const navItems = useRef(null);
   const linksContainer = useRef(null);
 
@@ -44,6 +45,19 @@ const Header = () => {
     setTranslate(!translate);
     setTheme(!theme);
   };
+
+  const animHeader = (elem, duration) => {
+    gsap.from(elem, {
+      duration: duration,
+      opacity: 0,
+      y: -200,
+      ease: Power4.easeInOut,
+    });
+  };
+
+  useEffect(() => {
+    animHeader(".header__nav", 4);
+  }, []);
 
   return (
     <header className="header">

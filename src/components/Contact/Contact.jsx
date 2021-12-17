@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import { RiMailLine } from "react-icons/all";
+import { gsap } from "gsap";
+import { Power4 } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Contact = () => {
+  const TitleRef = useRef(null);
+
+  const triggerItem = (elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      y: 50,
+      ease: Power4.easeOut,
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom",
+      },
+    });
+  };
+
+  useEffect(() => {
+    triggerItem(TitleRef.current);
+  }, []);
+
   return (
     <section className="contact" id="contact">
       <div className="contact__wrap container">
-        <div className="section__title">
+        <div className="section__title" ref={TitleRef}>
           <h1>Contact.</h1>
         </div>
         <div className="contact__content">

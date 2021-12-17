@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./ListProject.css";
 import { RiLinkM, VscGithub } from "react-icons/all";
 import { useGlobalContext } from "../../context";
-import "./ListProject.css";
+import { gsap } from "gsap";
+import { Power4 } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const ListProject = ({
   id,
@@ -17,6 +23,30 @@ const ListProject = ({
 }) => {
   const { toggleCursor, setSelected, setLineCross } = useGlobalContext();
   const [hoverIcon, setHoverIcon] = useState(false);
+
+  const triggerItem = (elem) => {
+    gsap.fromTo(
+      elem,
+      {
+        y: 50,
+        ease: Power4.easeOut,
+      },
+      {
+        y: 0,
+        ease: Power4.easeOut,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 90%",
+          end: "bottom",
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    triggerItem(".project__item");
+    triggerItem(".project_item_reverse");
+  }, []);
 
   return (
     <article className={direction ? "project_item_reverse" : "project__item"}>

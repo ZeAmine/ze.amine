@@ -1,33 +1,27 @@
 import React, { useEffect } from "react";
+import "./Hero.css";
 import { RiMailLine } from "react-icons/all";
 import { gsap } from "gsap";
 import { Power4, Sine } from "gsap/gsap-core";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import "./Hero.css";
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Hero = () => {
   const slideText = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        y: 300,
-        ease: Power4.easeOut,
-        delay: delay,
-        duration: duration,
-      },
-      {
-        y: 0,
-        stagger: {
-          each: 0.1,
-        },
-        ease: Power4.easeOut,
-        delay: delay,
-        duration: duration,
-      }
-    );
+    gsap.from(elem, {
+      y: 300,
+      stagger: 0.1,
+      ease: Power4.easeOut,
+      delay: delay,
+      duration: duration,
+    });
+  };
+
+  const appearBtn = (elem, delay, duration) => {
+    gsap.from(elem, {
+      opacity: 0,
+      ease: Power4.easeInOut,
+      duration: duration,
+      delay: delay,
+    });
   };
 
   const slideImg = (elem, duration) => {
@@ -40,28 +34,21 @@ const Hero = () => {
     });
   };
 
-  // // Logo Animation
-  // const triggerLogo = (elemTrigger, elemTarget, duration) => {
-  //   gsap.from(elemTarget, {
-  //     opacity: 0,
-  //     y: 500,
-  //     duration: duration,
-  //     ease: Power4.easeInOut,
-  //     ScrollTrigger: {
-  //       trigger: elemTrigger,
-  //       start: "top top",
-  //       end: () => `+=${elemTrigger.offset}`,
-  //       scrub: 0.5,
-  //       pin: true,
-  //     },
-  //   });
-  // };
+  const growImg = (elem, delay, duration) => {
+    gsap.from(elem, {
+      opacity: 0,
+      ease: Power4.easeInOut,
+      duration: duration,
+      delay: delay,
+    });
+  };
 
   useEffect(() => {
-    slideText(".hero__text", 1.2, 1.5);
-    slideText([".hero_name_text", ".hero__line"], 1.5, 1.5);
+    slideText([".hero_name_text", ".hero__line"], 1.2, 1.7);
+    slideText(".hero__text", 2, 1.7);
+    appearBtn(".button__contact", 2, 1);
+    growImg(".hero_img_bg", 2.5, 1);
     slideImg(".hero_img_bg", 2);
-    // triggerLogo(".hero__wrap", ".hero__title", 1);
   }, []);
 
   return (
