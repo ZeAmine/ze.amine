@@ -12,6 +12,8 @@ const Hero = () => {
       ease: Power4.easeOut,
       delay: delay,
       duration: duration,
+      scrub:true,
+      pin:true,
     });
   };
 
@@ -40,6 +42,9 @@ const Hero = () => {
       ease: Power4.easeInOut,
       duration: duration,
       delay: delay,
+      onComplete: () => {
+        document.querySelector('.app').classList.remove('is-loading')
+      }
     });
   };
 

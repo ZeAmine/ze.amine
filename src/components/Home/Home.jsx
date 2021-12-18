@@ -9,7 +9,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <>
+    <div className="app is-loading">
       <Header />
       <main className="main" id="home">
         <div className="main__wrap">
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

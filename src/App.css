@@ -191,6 +191,12 @@ svg {
   overflow-x: hidden;
 }
 
+.is-loading .projects,
+.is-loading .contact,
+.is-loading .footer {
+  display: none
+}
+
 .section {
   padding-bottom: 10vh;
 }
