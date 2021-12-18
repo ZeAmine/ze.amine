@@ -64,7 +64,7 @@ const ListProject = ({
         >
           <ul
             className="project__links"
-            style={{ display: id === 4 || id === 5 ? "none" : null }}
+            style={{ display: id === 7 || id === 8 ? "none" : null }}
           >
             <li className="project_item_link github">
               <a
@@ -87,6 +87,8 @@ const ListProject = ({
             <li className="project_item_link site">
               <a
                 href={url}
+                rel="noreferrer"
+                target="_blank"
                 style={{
                   width: hoverIcon && "2em",
                   padding: hoverIcon && "0.37em",
@@ -107,7 +109,7 @@ const ListProject = ({
           >
             <div
               className="project_img_container"
-              onClick={id === 4 || id === 5 ? handleClick : null}
+              onClick={id === 7 || id === 8 ? handleClick : null}
             >
               <a
                 href={url}
@@ -130,7 +132,7 @@ const ListProject = ({
             </div>
           </div>
         </div>
-        <div className="project_content_left">
+        <div className="project_content_left" style={{marginTop: id === 8 || id === 7 ? "-0.8em" : null }}>
           <div className="project__title">
             <h2>{title}</h2>
           </div>

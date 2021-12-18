@@ -21,7 +21,6 @@ const Projects = ({ title, items }) => {
         trigger: elem,
         start: "top 80%",
         end: "bottom",
-        markers: true,
       },
     });
   };
