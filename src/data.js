@@ -55,7 +55,7 @@ export const projects = {
       url: "https://roots-production.netlify.app/",
       urlGit: "https://github.com/ZeAmine/roots-production",
       title: "Roots.",
-      text: "Site permettant la propulsion d'artiste peut connu grâce à un system de vote ouvert au public.",
+      text: "Site communautaire permettant la propulsion d'artiste peut connu, grâce à un system de vote ouvert au public.",
       language: "REACT.JS · TYPESCRIPT · AXIOS · API SPOTIFY",
     },
     {
@@ -71,7 +71,7 @@ export const projects = {
     },
     {
       id: 7,
-      img: "img5.png",
+      img: "eclipse_poster.png",
       num: "BONUS 01",
       title: "Affiche Eclipse.",
       text: "1er conception graphique, basé sur un projet de Design Fiction.",
@@ -79,7 +79,7 @@ export const projects = {
     },
     {
       id: 8,
-      img: "img5.png",
+      img: "eclipse_poster2.png",
       num: "BONUS 02",
       title: "Affiche Eclipse.",
       text: "2e conception graphique, basé sur un projet de Design Fiction.",

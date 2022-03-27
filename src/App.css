@@ -226,11 +226,11 @@ svg {
 
 .button__contact {
   font-family: var(--font-primary-1);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   width: auto;
   border-radius: 50px;
-  background: transparent;
+  background-color: transparent;
   transition: all 200ms;
   cursor: pointer;
 }
@@ -249,9 +249,14 @@ svg {
 
 .icon__contact {
   width: 1.25rem;
+  height: 1.25rem;
   color: var(--clr-primary-2);
 }
-
+.mail__contact {
+  display: flex;
+  align-items: center;
+  transform: translateY(-3px);
+}
 .mail__contact h4 {
   font-size: var(--size-text-btn);
   font-weight: 500;

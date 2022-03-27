@@ -44,9 +44,7 @@ const Contact = () => {
             <div className="contact__text">
               <p>
                 Je suis actuellement en recherche d'un stage. N'hésitez pas
-                <br />à me contacter sur LinkedIn/ Facebook ou simplement par
-                mail, <br />
-                je ferai de mon mieux pour vous répondre !
+                <br />à me contacter sur LinkedIn ou simplement par mail.
               </p>
             </div>
             <div className="contact_btn_container">
@@ -54,9 +52,15 @@ const Contact = () => {
                 <div className="icon__container">
                   <RiMailLine className="icon__contact" />
                 </div>
-                <span className="mail__contact">
-                  <h4>amine.zegmou@gmail.com</h4>
-                </span>
+                <a
+                  href="mailto:amine95170@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="mail__contact">
+                    <h4>amine95170@gmail.com</h4>
+                  </span>
+                </a>
               </button>
             </div>
           </div>

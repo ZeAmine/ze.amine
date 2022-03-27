@@ -12,8 +12,8 @@ const Hero = () => {
       ease: Power4.easeOut,
       delay: delay,
       duration: duration,
-      scrub:true,
-      pin:true,
+      scrub: true,
+      pin: true,
     });
   };
 
@@ -43,8 +43,8 @@ const Hero = () => {
       duration: duration,
       delay: delay,
       onComplete: () => {
-        document.querySelector('.app').classList.remove('is-loading')
-      }
+        document.querySelector(".app").classList.remove("is-loading");
+      },
     });
   };
 
@@ -91,9 +91,15 @@ const Hero = () => {
                   <div className="icon__container">
                     <RiMailLine className="icon__contact" />
                   </div>
-                  <span className="mail__contact">
-                    <h4>amine.zegmou@gmail.com</h4>
-                  </span>
+                  <a
+                    href="mailto:amine95170@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="mail__contact">
+                      <h4>amine95170@gmail.com</h4>
+                    </span>
+                  </a>
                 </button>
               </a>
             </div>
